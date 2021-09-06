@@ -45,12 +45,14 @@
 
 if (isset($_POST['plus'])){
     $nombre++;
+    // update ton score
     //On renvoi le nombre dans la base de donnée ou le fichier
 }else if(isset($_POST['moins'])){
     $nombre--;
     //On renvoi le nombre dans la base de donnée ou le fichier
 }
 echo $nombre;
+// echo du score en base : SELECT
 ?>
     <form method="post" action="jeu.php">
         <input type="submit" name="plus" value="Plus" />
