@@ -14,32 +14,35 @@
 
 <div class="container-fluid mt-5">
     <div class="row">
-            <div class="col-1 p-0">
-                <div class="cercle"></div>
+        <div class="col-1 p-0">
+            <div class="rouge2 bloc2">
+                <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a>
             </div>
-            <div class="plus_un1"><p>+1</p></div>
-            <div class="col-4">
-                <table class="m-auto">
-                    <tbody>
-                    <tr>
-                        <td scope="equipe_rouge">Equipe rouge</td>
-                        <td scope="equipe_bleue">Equipe bleue</td>
-                    </tr>
-                    <tr>
-                        <td>Points</td>
-                        <td>Points</td>
-                    </tr>
-                    </tbody>
-                </table>
+        </div>
+        <div class="col-4">
+            <table class="m-auto">
+                <tbody>
+                <tr>
+                    <td scope="equipe_rouge">Equipe rouge</td>
+                    <td scope="equipe_bleue">Equipe bleue</td>
+                </tr>
+                <tr>
+                    <td>Points</td>
+                    <td>Points</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1 p-0">
+            <div class="bleu2 bloc2">
+                <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a>
             </div>
-            <div class="col-1 p-0">
-                <div class="cercle2"></div>
-            </div>
-            <div class="plus_un2"><p>+1</p></div>
+        </div>
         <div class="col-6">
 
         </div>
     </div>
+</div>
     <?php
     $nombre = 0;//Récupération de ton nombre via base de donnée ou fichier (cf cours m@teo21)
 
