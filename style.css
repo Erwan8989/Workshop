@@ -1,3 +1,12 @@
+/* Police */
+
+@font-face {
+    font-family: "roblox";
+    src: url("police/Roblox Font Black.otf");
+   }
+
+/* Style */
+
 .rouge{
    
     font-size: 50px;
@@ -55,6 +64,7 @@
     font-size: 60px;
     text-align: center;
     font-weight: bold;
+    font-family: roblox;
 }
 
 .bloc4{
