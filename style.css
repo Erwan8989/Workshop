@@ -10,12 +10,12 @@
 
 .bleu{
    
-    width: 3em;
-    border-radius: 15px;
     font-size: 50px;
-    color: black;
-    margin: 0em;
     position: static;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 15px;
 }
 
 
@@ -164,7 +164,6 @@ td[scope="equipe_bleue"]{
     text-align: center;
     text-decoration: none;
     color: black;
-
     border: 0;
     line-height: 2.5;
     padding: 0 20px;
