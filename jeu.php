@@ -16,6 +16,8 @@
 include('bdd.php');
 
 $i = $_GET['i'];
+$j = $_GET['j'];
+$n = true;
 
 ?>
 
@@ -23,7 +25,32 @@ $i = $_GET['i'];
     <div class="row">
         <div class="col-1 p-0">
             <div class="rouge2 bloc2">
-                <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a>
+                <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
+                <?php
+
+@session_start();
+
+$mov = "";
+
+
+
+if (isset($_POST['mov'])) {
+$mov=$_POST['mov'];}
+
+
+if($mov=='plus')
+{
+$req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=1");
+                                $req->execute();
+}
+
+
+
+echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
+echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov' VALUE='plus'>";
+echo "<INPUT TYPE=SUBMIT VALUE='plus'>";
+echo "</FORM>";
+?>
             </div>
         </div>
         <div class="col-4">
@@ -35,6 +62,15 @@ $i = $_GET['i'];
                 </tr>
                 <tr>
                     <td><?php 
+                        // if($n){
+                        //     if($j == 1){
+                        //         $req=$conn->prepare("UPDATE score set points = 0 WHERE id=1");
+                        //         $req->execute();
+                        //         $n = false;
+                        //     }
+                        // }
+                        
+
                         if($i == 1){
                             $req=$conn->prepare("SELECT * FROM score WHERE id=1");
                             $req->execute();
@@ -60,7 +96,30 @@ $i = $_GET['i'];
         </div>
         <div class="col-1 p-0">
             <div class="bleu2 bloc2">
-                <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a>
+                <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
+                <?php
+
+$mov = "";
+ 
+if (isset($_POST['mov'])) {
+$mov=$_POST['mov'];}
+
+if($mov=='plus')
+{
+
+$req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=2");
+                                $req->execute();
+                                $mov = '';
+}
+
+
+
+echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
+echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov' VALUE='plus'>";
+echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='gal' VALUE='$gal'>";
+echo "<INPUT TYPE=SUBMIT VALUE='plus'>";
+echo "</FORM>";
+?>
             </div>
         </div>
         <div class="col-6">
