@@ -29,26 +29,26 @@ $i = $_GET['i'];
 $j = $_GET['j'];
 $mov = "";
 $mov2 = "";
-$reset = "";
 $reponse = "";
+$Reset = "";
 
 ?>
 
 <div class="container-fluid mt-5">
     <div class="row ">
     <?php 
-    if (isset($_POST['reset'])) {
-    $reset=$_POST['reset'];
+    if (isset($_POST['Reset'])) {
+    $Reset=$_POST['Reset'];
     }
     
-    if($reset=='reset'){
+    if($Reset=='Reset'){
         $req=$conn->prepare("UPDATE score set points = 0");
         $req->execute();
     }
 
 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
-echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='reset' VALUE='reset'>";
-echo "<INPUT TYPE=SUBMIT VALUE='reset' class=bouton>  ";
+echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='Reset' VALUE='Reset'>";
+echo "<INPUT TYPE=SUBMIT VALUE='Reset' class=bouton3>  ";
 echo "</FORM>";
 ?>
     </div>
@@ -67,7 +67,7 @@ echo "</FORM>";
                     }
 
 
-                    if($mov=='plus')
+                    if($mov=='+1 point')
                     {
                         $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=1");
                         $req->execute();
@@ -79,14 +79,14 @@ echo "</FORM>";
                         $mov2=$_POST['mov2'];
                         }
     
-                    if($mov2=='plus'){
+                    if($mov2=='+1 point'){
                         $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=2");
                         $req->execute();
                     }
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
-                    echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov' VALUE='plus'>";
-                    echo "<INPUT TYPE=SUBMIT VALUE='plus' class=bouton>";
+                    echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov' VALUE='+1 point'>";
+                    echo "<INPUT TYPE=SUBMIT VALUE='+1 point' class=bouton>";
                     echo "</FORM>";
                 ?>
             </div>
@@ -130,8 +130,8 @@ echo "</FORM>";
                 <?php
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
-                    echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov2' VALUE='plus'>";
-                    echo "<INPUT TYPE=SUBMIT VALUE='plus' class=bouton>";
+                    echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov2' VALUE='+1 point'>";
+                    echo "<INPUT TYPE=SUBMIT VALUE='+1 point' class=bouton2>";
                     echo "</FORM>";
 
                 ?>
