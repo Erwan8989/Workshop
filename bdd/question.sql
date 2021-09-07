@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 07 sep. 2021 à 08:38
+-- Généré le : mar. 07 sep. 2021 à 12:45
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -48,9 +48,9 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (8, 'Quel était l\'instrument de prédilection de Yehudi ?', 'le violon'),
 (9, 'Quelle est la hauteur du Mont Blanc ?', '4809'),
 (10, 'Quel fleuve traverse le Liban, la Syrie et la Turquie ?', 'L\'oronte'),
-(11, 'Quel le premier long métrage d animation de Walt Disney ?', 'Blanche neige et les sept nains'),
+(11, 'quand est ce qu\'est apparu blanche neige et les sept nains pour la première fois ?', ' 1937'),
 (12, 'Combien il y a de joueur sur un terrain de football ?', '11'),
-(13, 'Qu\'elle est la superficie de la France ? ', '632 734 km'),
+(13, ' La superficie de la France est elle supérieure à 600 000 km ?', 'oui'),
 (14, 'Combien de pattes ont les anilaux hexapodes ?', '6'),
 (15, 'Quel club de football détient le record du nombre de victoires en Ligue des Champion ?', 'Bayern Munich'),
 (16, 'Qui a remporté le plus de fois le Ballon d\'or ?', 'Lionel Messi'),
