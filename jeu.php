@@ -99,24 +99,23 @@ echo "</FORM>";
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
 
-$mov = "";
+$mov2 = "";
  
-if (isset($_POST['mov'])) {
-$mov=$_POST['mov'];}
+if (isset($_POST['mov2'])) {
+$mov2=$_POST['mov2'];}
 
-if($mov=='plus')
+if($mov2=='plus')
 {
 
 $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=2");
                                 $req->execute();
-                                $mov = '';
+                                $mov2 = '';
 }
 
 
 
 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
-echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov' VALUE='plus'>";
-echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='gal' VALUE='$gal'>";
+echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov2' VALUE='plus'>";
 echo "<INPUT TYPE=SUBMIT VALUE='plus'>";
 echo "</FORM>";
 ?>
