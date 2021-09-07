@@ -30,6 +30,7 @@ $j = $_GET['j'];
 $mov = "";
 $mov2 = "";
 $reset = "";
+$reponse = "";
 
 ?>
 
@@ -150,6 +151,15 @@ echo "</FORM>";
                         <input type="submit" class="reponse_bloc4" value="Valider">
                     </div>
                 </form>
+                <?php 
+                        if($i == 1){
+                            $req=$conn->prepare("SELECT * FROM score WHERE id=2");
+                            $req->execute();
+                        }
+                        
+                        // while ($donnees = $req->fetch()){
+                        //     echo $donnees['points'];
+                        // }?>
             </div>
             <div class="instru">
                 <p>
