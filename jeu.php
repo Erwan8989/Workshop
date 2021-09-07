@@ -34,7 +34,7 @@ $reset = "";
 ?>
 
 <div class="container-fluid mt-5">
-    <div class="row">
+    <div class="row ">
     <?php 
     if (isset($_POST['reset'])) {
     $reset=$_POST['reset'];
@@ -45,9 +45,9 @@ $reset = "";
         $req->execute();
     }
 
-echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
+echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
 echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='reset' VALUE='reset'>";
-echo "<INPUT TYPE=SUBMIT VALUE='reset'>";
+echo "<INPUT TYPE=SUBMIT VALUE='reset' class=bouton>  ";
 echo "</FORM>";
 ?>
     </div>
@@ -77,7 +77,7 @@ echo "</FORM>";
                     if (isset($_POST['mov2'])) {
                         $mov2=$_POST['mov2'];
                         }
-                        
+    
                     if($mov2=='plus'){
                         $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=2");
                         $req->execute();
@@ -85,7 +85,7 @@ echo "</FORM>";
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
                     echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov' VALUE='plus'>";
-                    echo "<INPUT TYPE=SUBMIT VALUE='plus'>";
+                    echo "<INPUT TYPE=SUBMIT VALUE='plus' class=bouton>";
                     echo "</FORM>";
                 ?>
             </div>
@@ -130,7 +130,7 @@ echo "</FORM>";
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
                     echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov2' VALUE='plus'>";
-                    echo "<INPUT TYPE=SUBMIT VALUE='plus'>";
+                    echo "<INPUT TYPE=SUBMIT VALUE='plus' class=bouton>";
                     echo "</FORM>";
 
                 ?>
