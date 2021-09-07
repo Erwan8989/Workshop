@@ -36,25 +36,30 @@ $Reset = "";
 
 <div class="container-fluid mt-5">
     <div class="row ">
-    <?php 
-    if (isset($_POST['Reset'])) {
-    $Reset=$_POST['Reset'];
-    }
-    
-    if($Reset=='Reset'){
-        $req=$conn->prepare("UPDATE score set points = 0");
-        $req->execute();
-    }
+        <div class="col-6">
+            <?php 
+                if (isset($_POST['Reset'])) {
+                $Reset=$_POST['Reset'];
+                }
+                
+                if($Reset=='Reset'){
+                    $req=$conn->prepare("UPDATE score set points = 0");
+                    $req->execute();
+                }
 
-echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
-echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='Reset' VALUE='Reset'>";
-echo "<INPUT TYPE=SUBMIT VALUE='Reset' class=bouton3>  ";
-echo "</FORM>";
-?>
+                echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
+                echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='Reset' VALUE='Reset'>";
+                echo "<INPUT TYPE=SUBMIT VALUE='Reset' class=bouton3>  ";
+                echo "</FORM>";
+            ?>
+        </div>
+        <div class="col-6 regles">
+            <a href="/workshop/regles.php" target="_BLANK" class="texte_regles">Règles</a>
+        </div>
     </div>
     <div class="row">
         <div class="col-1 p-0">
-            <div class="rouge2 bloc2">
+            <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
 
@@ -125,7 +130,7 @@ echo "</FORM>";
             </table>
         </div>
         <div class="col-1 p-0">
-            <div class="bleu2 bloc2">
+            <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
 

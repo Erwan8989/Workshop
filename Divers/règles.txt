@@ -1,6 +1,14 @@
-Regle :
+Règles :
 
-
-Pendant la partie de baby-foot, si un de vous parviens a mettre un but 
+Pendant votre partie de baby-foot, si un de vous parviens a mettre un but 
 dans la cage adverse, il devra répondre à une question !
 Bonne ou mauvaise réponse la suite vous réserve des surprise ! 
+
+///////////////////////////////////////////////////
+
+Cette plateforme va vous permettre de jouer au baby-foot avec vos amis, en y ajoutant des éléments qui vont changer le mode jeu. 
+
+Dès qu'un but est marqué, ajoutez un point. Une question est alors posée à l'équipe venant de gagner un point. Selon vos réponses, 
+des instructions seront affichées en dessous. Appliquez-les jusqu'au prochain but. 
+
+Bonnes parties ! 
