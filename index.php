@@ -21,11 +21,11 @@
     <div class="row">
         <div class="col">
             <div class="rouge bloc2">
-                <a href="jeu.php" class="para"><p class="para">1 VS 1</p></a>
+                <a href="jeu.php?i=1" class="para"><p class="para">1 VS 1</p></a>
 
             </div>
             <div class="bleu bloc2">
-                <a href="jeu.php" class="para"><p class="para">2 VS 2</p></a>
+                <a href="jeu.php?i=2" class="para"><p class="para">2 VS 2</p></a>
             </div>
         </div>
     </div>

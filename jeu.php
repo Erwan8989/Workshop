@@ -12,6 +12,13 @@
 </head>
 <body>
 
+<?php
+include('bdd.php');
+
+$i = $_GET['i'];
+
+?>
+
 <div class="container-fluid mt-5">
     <div class="row">
         <div class="col-1 p-0">
@@ -27,8 +34,26 @@
                     <td scope="equipe_bleue">Equipe bleue</td>
                 </tr>
                 <tr>
-                    <td>Points</td>
-                    <td>Points</td>
+                    <td><?php 
+                        if($i == 1){
+                            $req=$conn->prepare("SELECT * FROM score WHERE id=1");
+                            $req->execute();
+                        }
+
+                        while ($donnees = $req->fetch()){
+                            echo $donnees['points'];
+                        }?>
+                    </td>
+                    <td><?php 
+                        if($i == 1){
+                            $req=$conn->prepare("SELECT * FROM score WHERE id=2");
+                            $req->execute();
+                        }
+                        
+                        while ($donnees = $req->fetch()){
+                            echo $donnees['points'];
+                        }?>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -43,8 +68,9 @@
         </div>
     </div>
 </div>
-    <?php
-    $nombre = 0;//Récupération de ton nombre via base de donnée ou fichier (cf cours m@teo21)
+    <!-- <?php
+    
+    $nombre = 0; //Récupération de ton nombre via base de donnée ou fichier (cf cours m@teo21)
 
 if (isset($_POST['plus'])){
     $nombre++;
@@ -60,7 +86,7 @@ echo $nombre;
     <form method="post" action="jeu.php">
         <input type="submit" name="plus" value="Plus" />
         <input type="submit" name="moins" value="Moins" />
-    </form>
+    </form> -->
 
 <!-- Optional JavaScript; choose one of the two! -->
 
