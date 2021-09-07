@@ -115,6 +115,7 @@ $Reset = "";
                             echo $donnees['points'];
                         }?>
                     </td>
+
                     <td><?php 
                         if($i == 1){
                             $req=$conn->prepare("SELECT * FROM score WHERE id=2");
@@ -156,15 +157,37 @@ $Reset = "";
                         <input type="submit" class="reponse_bloc4" value="Valider">
                     </div>
                 </form>
+
                 <?php 
-                        if($i == 1){
-                            $req=$conn->prepare("SELECT * FROM score WHERE id=2");
-                            $req->execute();
-                        }
+
+
+                      
+
+                        // $reponse = "";
+                        
+
+                       
+                        // $req=$conn->prepare("SELECT * FROM question ORDER BY RAND);
+                        // $req->execute([$_POST['valeur']])
+                        
+
+                        
+                        // $reponse = $req->fetch();  
+                        // if($reponse){  
+                        //     $erreurs['nom'] ="Ce nom exixte";  
+                        // }elseif ($user != $_POST['nom']) {  
+                        // $erreurs['nom'] ="Votre nom n'est pas le même veillez revérifier";  
+                        
+
+
+
                         
                         // while ($donnees = $req->fetch()){
                         //     echo $donnees['points'];
-                        // }?>
+                        // }
+                        
+                ?>
+                
             </div>
             <div class="instru">
                 <p>
