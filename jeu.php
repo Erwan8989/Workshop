@@ -17,6 +17,8 @@ include('bdd.php');
 
 $i = $_GET['i'];
 $j = $_GET['j'];
+$mov = "";
+$mov2 = "";
 $n = true;
 
 ?>
@@ -30,21 +32,29 @@ $n = true;
 
 @session_start();
 
-$mov = "";
-
-
+// Conditions pour points equipes 1
 
 if (isset($_POST['mov'])) {
-$mov=$_POST['mov'];}
+    $mov=$_POST['mov'];
+}
 
 
 if($mov=='plus')
 {
-$req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=1");
-                                $req->execute();
+    $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=1");
+    $req->execute();
 }
 
+// Conditions pour points equipes 2
 
+if (isset($_POST['mov2'])) {
+    $mov2=$_POST['mov2'];
+    }
+    
+    if($mov2=='plus'){
+        $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=2");
+        $req->execute();
+    }
 
 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
 echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov' VALUE='plus'>";
@@ -99,25 +109,11 @@ echo "</FORM>";
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
 
-$mov2 = "";
- 
-if (isset($_POST['mov2'])) {
-$mov2=$_POST['mov2'];}
-
-if($mov2=='plus')
-{
-
-$req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=2");
-                                $req->execute();
-                                $mov2 = '';
-}
-
-
-
 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
 echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='mov2' VALUE='plus'>";
 echo "<INPUT TYPE=SUBMIT VALUE='plus'>";
 echo "</FORM>";
+
 ?>
             </div>
         </div>
