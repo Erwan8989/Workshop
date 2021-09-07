@@ -10,6 +10,7 @@
 $mov = "";
 $gal = "";
 
+
 if (isset($_POST['gal'])) {
 $gal=$_POST['gal']; }
  

@@ -1,14 +1,16 @@
 .rouge{
-    background-color: crimson;
-    width: 3em;
-    border-radius: 15px;
+   
     font-size: 50px;
-    color: black;
     position: static;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 15px;
+
 }
 
 .bleu{
-    background-color: blue;
+   
     width: 3em;
     border-radius: 15px;
     font-size: 50px;
@@ -17,14 +19,6 @@
     position: static;
 }
 
-.rouge2{
-    background-color: crimson;
-    width: 3em;
-    border-radius: 15px;
-    font-size: 30px;
-    color: black;
-    position: static;
-}
 
 .bleu2{
     background-color: blue;
@@ -56,6 +50,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 5em;
+
 }
 
 .bloc3{
@@ -136,4 +131,81 @@ td[scope="equipe_bleue"]{
     font-size: 20px;
     font-weight: bold;
     margin: 0.67em 0em 0em 2.8em;
+}
+
+
+.button1 {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+
+    font-size: 35px;
+    width: 33vh;
+    cursor: pointer;
+}
+
+}
+
+.button1:hover {
+    background-color: rgba(255, 0, 0, 1);
+    cursor: pointer;
+}
+
+.button1:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.button2 {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(37, 61, 255, 0.9);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+
+    font-size: 35px;
+    width: 33vh;
+    cursor: pointer;
+}
+
+}
+
+.button2:hover {
+    background-color: rgba(37, 61, 255, 0.9);
+    cursor: pointer;
+}
+
+.button2:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
