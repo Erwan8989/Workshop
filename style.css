@@ -186,8 +186,6 @@ td[scope="equipe_bleue"]{
     cursor: pointer;
 }
 
-}
-
 .button1:hover {
     background-color: rgba(255, 0, 0, 1);
     cursor: pointer;
