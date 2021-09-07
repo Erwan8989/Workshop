@@ -19,11 +19,29 @@ $i = $_GET['i'];
 $j = $_GET['j'];
 $mov = "";
 $mov2 = "";
+$reset = "";
 $n = true;
 
 ?>
 
 <div class="container-fluid mt-5">
+    <div class="row">
+    <?php 
+    if (isset($_POST['reset'])) {
+    $reset=$_POST['reset'];
+    }
+    
+    if($reset=='reset'){
+        $req=$conn->prepare("UPDATE score set points = 0");
+        $req->execute();
+    }
+
+echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
+echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='reset' VALUE='reset'>";
+echo "<INPUT TYPE=SUBMIT VALUE='reset'>";
+echo "</FORM>";
+?>
+    </div>
     <div class="row">
         <div class="col-1 p-0">
             <div class="rouge2 bloc2">
