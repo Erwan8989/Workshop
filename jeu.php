@@ -89,15 +89,7 @@ echo "</FORM>";
                     <td scope="equipe_bleue">Equipe bleue</td>
                 </tr>
                 <tr>
-                    <td><?php 
-                        // if($n){
-                        //     if($j == 1){
-                        //         $req=$conn->prepare("UPDATE score set points = 0 WHERE id=1");
-                        //         $req->execute();
-                        //         $n = false;
-                        //     }
-                        // }
-                        
+                    <td><?php                        
 
                         if($i == 1){
                             $req=$conn->prepare("SELECT * FROM score WHERE id=1");
@@ -140,25 +132,6 @@ echo "</FORM>";
         </div>
     </div>
 </div>
-    <!-- <?php
-    
-    $nombre = 0; //Récupération de ton nombre via base de donnée ou fichier (cf cours m@teo21)
-
-if (isset($_POST['plus'])){
-    $nombre++;
-    // update ton score
-    //On renvoi le nombre dans la base de donnée ou le fichier
-}else if(isset($_POST['moins'])){
-    $nombre--;
-    //On renvoi le nombre dans la base de donnée ou le fichier
-}
-echo $nombre;
-// echo du score en base : SELECT
-?>
-    <form method="post" action="jeu.php">
-        <input type="submit" name="plus" value="Plus" />
-        <input type="submit" name="moins" value="Moins" />
-    </form> -->
 
 <!-- Optional JavaScript; choose one of the two! -->
 
