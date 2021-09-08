@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 08 sep. 2021 à 10:01
--- Version du serveur :  8.0.21
+-- Généré le : mer. 08 sep. 2021 à 11:05
+-- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `question` (
   `question` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `reponse` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `question`
@@ -59,7 +59,21 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (19, 'A quel autre animal ressemble le wallaby ?', 'Kangourou\r\n'),
 (20, '\r\nQuelle note de musique est également appelée  ut  ?', 'Do'),
 (21, 'Qui est l\'auteur de Moby Dick ?', 'Herman Melville'),
-(22, 'Combien y a t\'il d\'Etoile sur le drapeau européen ?', '12');
+(22, 'Combien y a t\'il d\'Etoile sur le drapeau européen ?', '12'),
+(23, 'Quel titre de noblesse est immédiatement inférieur à celui de comte ?', 'vicomte'),
+(24, 'De quelle série de six films un champion de boxe est-il la vedette ? ', 'rocky'),
+(25, 'Quel numéro d\'urgence devez-vous composer pour joindre les pompiers ?', '18'),
+(26, 'Comment se prénommait l\'épouse du Roi Arthur ?', 'guenievre'),
+(27, 'Comment appelait-on les Espagnols qui conquirent l\'Amérique ?', 'conquistadors'),
+(28, 'Quelle est la forme géométrique d\'un panneau d\'interdiction ? ', 'rond'),
+(29, 'Sur un navire, qu\'indique la position à bâbord ?', 'gauche'),
+(30, 'De quelle couleur est le personnage Pacman ?', ' jaune'),
+(31, 'Quel est le nom du scientifique professeur, ami de Tintin ?', 'tournesol'),
+(32, 'Le premier pays a avoir gagné la Coupe du monde de Football est :', 'uruguay'),
+(33, 'e quelle origine est la firme aéronautique Boeing ?', 'americaine'),
+(34, 'Quel géant fut vaincun par David ?', 'Goliath'),
+(35, 'Aux États-Unis, quels types de claviers utilise-t-on ? ', 'qwerty\r\n'),
+(36, 'En espagnol, que signifie le mot \" corazon \" ?', 'coeur');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
