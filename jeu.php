@@ -24,6 +24,7 @@
 
 <?php
 include('bdd.php');
+session_start();
 
 $i = $_GET['i'];
 $j = $_GET['j'];
@@ -46,6 +47,8 @@ $donnees2 = "";
                 if($Reset=='Reset'){
                     $req=$conn->prepare("UPDATE score set points = 0");
                     $req->execute();
+                    unset($_SESSION['instruction']);
+                    unset($_SESSION['question']);
                 }
 
                 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
@@ -63,9 +66,6 @@ $donnees2 = "";
             <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
-
-                    @session_start();
-
                     // Conditions pour points equipes 1
 
                     if (isset($_POST['mov'])) {
@@ -96,7 +96,9 @@ $donnees2 = "";
                         $req->execute();
                         $req=$conn->prepare("SELECT * FROM question ORDER BY rand()");
                         $req->execute();    
-                        $donnees2 = $req->fetch();                         
+                        $donnees2 = $req->fetch();    
+                        $_SESSION['question'] = $donnees2['question'];  
+                        $_SESSION['reponse'] = $donnees2['reponse'];                      
                     }
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
@@ -163,7 +165,7 @@ $donnees2 = "";
                     echo $_SESSION['question'];
                 } 
                 else{
-                    echo "Les questions apparaitront ici !";
+                    echo "Les questions apparaîtront ici !";
                 }                 
                 ?>
             </div>
@@ -179,14 +181,16 @@ $donnees2 = "";
                 <?php 
                     if(isset($_POST['name'])){
                         if($_POST['name'] == $_SESSION['reponse']){
-                            echo 'Hello';
                             $req=$conn->prepare("SELECT * FROM bonus ORDER BY rand()");
                             $req->execute();
                             $donnees3 = $req->fetch();
                             $_SESSION['instruction'] = $donnees3['instruction'];
                         }
                         else{
-                            
+                            $req=$conn->prepare("SELECT * FROM malus ORDER BY rand()");
+                            $req->execute();
+                            $donnees3 = $req->fetch();
+                            $_SESSION['instruction'] = $donnees3['instruction'];
                         }
                     }
 
