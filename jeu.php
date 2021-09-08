@@ -81,7 +81,8 @@ $donnees2 = "";
                         $req->execute();    
                         $donnees2 = $req->fetch(); 
                         $_SESSION['question'] = $donnees2['question'];  
-                        $_SESSION['reponse'] = $donnees2['reponse'];               
+                        $_SESSION['reponse'] = $donnees2['reponse'];    
+                        unset($_SESSION['instruction']);           
                     }
                     
 
@@ -98,7 +99,8 @@ $donnees2 = "";
                         $req->execute();    
                         $donnees2 = $req->fetch();    
                         $_SESSION['question'] = $donnees2['question'];  
-                        $_SESSION['reponse'] = $donnees2['reponse'];                      
+                        $_SESSION['reponse'] = $donnees2['reponse'];  
+                        unset($_SESSION['instruction']);                    
                     }
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
@@ -185,37 +187,16 @@ $donnees2 = "";
                             $req->execute();
                             $donnees3 = $req->fetch();
                             $_SESSION['instruction'] = $donnees3['instruction'];
+                            $_SESSION['titre'] = $donnees3['titre'];
                         }
                         else{
                             $req=$conn->prepare("SELECT * FROM malus ORDER BY rand()");
                             $req->execute();
                             $donnees3 = $req->fetch();
                             $_SESSION['instruction'] = $donnees3['instruction'];
+                            $_SESSION['titre'] = $donnees3['titre'];
                         }
                     }
-
-                        // $reponse = "";
-                        
-
-                       
-                        // $req=$conn->prepare("SELECT * FROM question ORDER BY RAND);
-                        // $req->execute([$_POST['valeur']])
-                        
-
-                        
-                        // $reponse = $req->fetch();  
-                        // if($reponse){  
-                        //     $erreurs['nom'] ="Ce nom exixte";  
-                        // }elseif ($user != $_POST['nom']) {  
-                        // $erreurs['nom'] ="Votre nom n'est pas le même veillez revérifier";  
-                        
-
-
-
-                        
-                        // while ($donnees = $req->fetch()){
-                        //     echo $donnees['points'];
-                        // }
                         
                 ?>
                 
@@ -225,6 +206,8 @@ $donnees2 = "";
                 <p class="instru_">
                     <?php
                     if(isset($_SESSION['instruction'])){
+                        echo $_SESSION['titre'];
+                        ?> <br><?php
                         echo $_SESSION['instruction'];;
                     }
                     else{

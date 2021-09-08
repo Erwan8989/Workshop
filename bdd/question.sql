@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 08 sep. 2021 à 07:58
--- Version du serveur :  5.7.31
+-- Généré le : mer. 08 sep. 2021 à 10:01
+-- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `question`;
 CREATE TABLE IF NOT EXISTS `question` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `question` text COLLATE utf8_unicode_ci NOT NULL,
-  `reponse` text COLLATE utf8_unicode_ci NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `question` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `reponse` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -48,7 +48,7 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (8, 'Quel était l\'instrument de prédilection de Yehudi ?', 'le violon'),
 (9, 'Quelle est la hauteur du Mont Blanc ?', '4809'),
 (10, 'Quel fleuve traverse le Liban, la Syrie et la Turquie ?', 'L\'oronte'),
-(11, 'quand est ce qu\'est apparu blanche neige et les sept nains pour la première fois ?', ' 1937'),
+(11, 'Quand est ce qu\'est apparu blanche neige et les sept nains pour la première fois ?', ' 1937'),
 (12, 'Combien il y a de joueur sur un terrain de football ?', '11'),
 (13, ' La superficie de la France est elle supérieure à 600 000 km ?', 'oui'),
 (14, 'Combien de pattes ont les animaux hexapodes ?', '6'),
