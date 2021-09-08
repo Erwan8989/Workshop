@@ -137,6 +137,9 @@
     font-size: 35px;
     width: 33vh;
     cursor: pointer;
+
+    font-style: oblique;
+    font-weight: bold;
     
 }
 
