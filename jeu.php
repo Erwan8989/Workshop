@@ -183,7 +183,7 @@ $donnees2 = "";
                             $req=$conn->prepare("SELECT * FROM bonus ORDER BY rand()");
                             $req->execute();
                             $donnees3 = $req->fetch();
-                            echo $donnees3['instruction'];
+                            $_SESSION['instruction'] = $donnees3['instruction'];
                         }
                         else{
                             
@@ -219,7 +219,15 @@ $donnees2 = "";
             
             <div class="instru">
                 <p class="instru_">
-                    Instructions
+                    <?php
+                    if(isset($_SESSION['instruction'])){
+                        echo $_SESSION['instruction'];;
+                    }
+                    else{
+                        echo "Les instructions apparaitront ici !";
+                    }
+                    
+                    ?>
                 </p>
             </div>
         </div>
