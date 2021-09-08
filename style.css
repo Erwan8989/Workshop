@@ -548,3 +548,25 @@ a:hover {
     
     color: rgb(255, 255, 255);
 }
+
+
+/* /////////////////////////////
+
+            Media Queries
+
+///////////////////////////// */
+
+@media only screen and (min-width: 576px) {
+    .m-auto {
+        width: 100%;
+        max-width: 1440px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .m-auto {
+        width: 100%;
+        max-width: 1440px;
+    }
+}
+
