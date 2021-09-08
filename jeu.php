@@ -159,9 +159,12 @@ $donnees2 = "";
                 if(isset($donnees2['question'])){
                     echo $donnees2['question'];
                 }
-                else{
+                elseif(isset($_SESSION['question'])){
                     echo $_SESSION['question'];
-                }                  
+                } 
+                else{
+                    echo "Les questions apparaitront ici !";
+                }                 
                 ?>
             </div>
             <div>
