@@ -177,6 +177,10 @@ $donnees2 = "";
                     if(isset($_POST['name'])){
                         if($_POST['name'] == $_SESSION['reponse']){
                             echo 'Hello';
+                            $req=$conn->prepare("SELECT * FROM bonus ORDER BY rand()");
+                            $req->execute();
+                            $donnees3 = $req->fetch();
+                            echo $donnees3['instruction'];
                         }
                         else{
                             
