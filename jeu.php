@@ -213,8 +213,9 @@ $donnees2 = "";
                 ?>
                 
             </div>
+            
             <div class="instru">
-                <p>
+                <p class="instru_">
                     Instructions
                 </p>
             </div>

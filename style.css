@@ -275,6 +275,12 @@
     background-color: #FFBD00;
     border-radius: 20px;
     height: auto;
+    display: flex;
+    width: auto;
+    border-radius: 7.5px;
+    justify-content: center;
+    
+
 }
 
 .regles{
@@ -285,6 +291,9 @@
     border-radius: 7.5px;
     justify-content: center;
     margin: auto;
+    position: relative;
+    top: 40em;
+    right: -5em;
 }
 
 .instructions{
