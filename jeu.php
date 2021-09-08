@@ -36,25 +36,30 @@ $Reset = "";
 
 <div class="container-fluid mt-5">
     <div class="row ">
-    <?php 
-    if (isset($_POST['Reset'])) {
-    $Reset=$_POST['Reset'];
-    }
-    
-    if($Reset=='Reset'){
-        $req=$conn->prepare("UPDATE score set points = 0");
-        $req->execute();
-    }
+        <div class="col-6">
+            <?php 
+                if (isset($_POST['Reset'])) {
+                $Reset=$_POST['Reset'];
+                }
+                
+                if($Reset=='Reset'){
+                    $req=$conn->prepare("UPDATE score set points = 0");
+                    $req->execute();
+                }
 
-echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
-echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='Reset' VALUE='Reset'>";
-echo "<INPUT TYPE=SUBMIT VALUE='Reset' class=bouton3>  ";
-echo "</FORM>";
-?>
+                echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
+                echo "<INPUT TYPE=HIDDEN SIZE=1 NAME='Reset' VALUE='Reset'>";
+                echo "<INPUT TYPE=SUBMIT VALUE='Reset' class=bouton3>  ";
+                echo "</FORM>";
+            ?>
+        </div>
+        <div class="col-6 regles">
+            <a href="/workshop/regles.php" target="_BLANK" class="texte_regles">Règles</a>
+        </div>
     </div>
     <div class="row">
         <div class="col-1 p-0">
-            <div class="rouge2 bloc2">
+            <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
 
@@ -110,6 +115,7 @@ echo "</FORM>";
                             echo $donnees['points'];
                         }?>
                     </td>
+
                     <td><?php 
                         if($i == 1){
                             $req=$conn->prepare("SELECT * FROM score WHERE id=2");
@@ -125,7 +131,7 @@ echo "</FORM>";
             </table>
         </div>
         <div class="col-1 p-0">
-            <div class="bleu2 bloc2">
+            <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
 
@@ -151,15 +157,37 @@ echo "</FORM>";
                         <input type="submit" class="reponse_bloc4" value="Valider">
                     </div>
                 </form>
+
                 <?php 
-                        if($i == 1){
-                            $req=$conn->prepare("SELECT * FROM score WHERE id=2");
-                            $req->execute();
-                        }
+
+
+                      
+
+                        // $reponse = "";
+                        
+
+                       
+                        // $req=$conn->prepare("SELECT * FROM question ORDER BY RAND);
+                        // $req->execute([$_POST['valeur']])
+                        
+
+                        
+                        // $reponse = $req->fetch();  
+                        // if($reponse){  
+                        //     $erreurs['nom'] ="Ce nom exixte";  
+                        // }elseif ($user != $_POST['nom']) {  
+                        // $erreurs['nom'] ="Votre nom n'est pas le même veillez revérifier";  
+                        
+
+
+
                         
                         // while ($donnees = $req->fetch()){
                         //     echo $donnees['points'];
-                        // }?>
+                        // }
+                        
+                ?>
+                
             </div>
             <div class="instru">
                 <p>

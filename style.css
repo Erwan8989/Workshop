@@ -1,3 +1,19 @@
+/* Police */
+
+@font-face {
+    font-family: "roblox";
+    src: url("police/Roblox Font Black.otf");
+   }
+
+/* Style */
+
+
+/* /////////////////////////////
+
+            Boutons 
+
+///////////////////////////// */
+
 .rouge{
    
     font-size: 50px;
@@ -18,147 +34,44 @@
     margin-bottom: 15px;
 }
 
+.bouton {
 
-.bleu2{
-    
-    font-size: 30px;
-    
-}
+    width: auto;
+    /* display: flex; */
+    font-size: 25px;
 
-.bloc_principal{
-    margin-top: 10em;
-}
-
-.para{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
     text-align: center;
-    text-decoration: none;
-    color: black;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
-.para2{
-    text-align: center;
-    text-decoration: none;
-    color: black;
+.bouton:hover {
+    background-color: rgba(255, 0, 0, 1);
 }
 
-.bloc2{
-    margin-left: auto;
-    margin-right: auto;
-    width: 5em;
-
+.bouton:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
-.bloc3{
-    margin-left: auto;
-    margin-right: auto;
-    width: 10em;
-    font-size: 60px;
-    text-align: center;
-    font-weight: bold;
+.form {
+    display: flex;
+    justify-content: center;
+    /* width: 50%; */
+    padding: 15px;
 }
-
-.bloc4{
-    margin: auto;
-    width: 15em;
-    font-size: 50px;
-    text-align: center;
-    font-weight: bold;
-    background-color: #51983E;
-    border-radius: 20px;
-}
-
-.reponse_bloc4{
-    margin: 0em;
-    width: 5em;
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    background-color: #5DAB48;
-    border-radius: 20px;
-}
-
-.reponse{
-    margin: 0em;
-    width: 13.5em;
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    background-color: #5DAB48;
-    border-radius: 20px;
-}
-
-.para:hover{
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 51px;
-}
-
-.para2:hover{
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-size: 31px;
-    font-weight: bold;
-}
-
-td
-{
-    border: 1px solid black;
-    text-align: center;
-}
-
-table{
-    border-collapse: collapse;
-}
-
-td[scope="equipe_rouge"]{
-    color: red;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-td[scope="equipe_bleue"]{
-    color: blue;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.cercle {
-    width: 60px;
-    height: 60px;
-    border-radius: 40px;
-    background-color: red;
-    margin: auto;
-}
-
-.cercle2 {
-    width: 60px;
-    height: 60px;
-    border-radius: 40px;
-    background-color: blue;
-    margin: 0em auto 0em auto;
-}
-
-.points{
-    margin: 1em 0em 0em 1em;
-}
-
-.plus_un1{
-    position: absolute;
-    margin: 0.67em 0em 0em 42.75em;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.plus_un2{
-    position: absolute;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0.67em 0em 0em 2.8em;
-}
-
 
 .button1 {
     text-align: center;
@@ -232,62 +145,6 @@ td[scope="equipe_bleue"]{
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
-.formulaire{
-    text-align: center;
-    margin: 2em 0em 2em 0em;
-}
-
-.instru{
-    background-color: #000;
-    width: 13.5em;
-    font-size: 55px;
-    margin: auto;
-    text-align: center;
-    font-weight: bold;
-    background-color: #FFBD00;
-    border-radius: 20px;
-    height: auto;
-}
-
-.bouton {
-
-    width: auto;
-    /* display: flex; */
-    font-size: 25px;
-
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgba(220, 0, 0, 1);
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
-}
-
-.bouton:hover {
-    background-color: rgba(255, 0, 0, 1);
-}
-
-.bouton:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
-}
-
-.form {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    padding: 15px
-}
-
 .bouton2 {
 
     width: auto;
@@ -312,7 +169,7 @@ td[scope="equipe_bleue"]{
 }
 
 .bouton2:hover {
-    background-color: rgba(37, 61, 255, 0.9);
+    background-color: rgba(0, 100, 255, 0.9);
 }
 
 .bouton2:active {
@@ -325,7 +182,7 @@ td[scope="equipe_bleue"]{
     width: auto;
     /* display: flex; */
     font-size: 25px;
-
+    margin: auto;
     border: 0;
     line-height: 2.5;
     padding: 0 20px;
@@ -344,10 +201,194 @@ td[scope="equipe_bleue"]{
 }
 
 .bouton3:hover {
-    background-color: #89898A;
+    background-color: #484848;
 }
 
 .bouton3:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/* /////////////////////////////
+
+            Blocs
+
+///////////////////////////// */
+
+.bloc_principal{
+    margin-top: 10em;
+}
+
+.bloc2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em;
+
+}
+
+.bloc3{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family: roblox;
+}
+
+.bloc4{
+    margin: auto;
+    width: 15em;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #51983E;
+    border-radius: 20px;
+}
+
+.reponse_bloc4{
+    margin: 0em;
+    width: 5em;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #5DAB48;
+    border-radius: 20px;
+}
+
+.reponse_bloc4:hover{
+    font-size: 32px;
+}
+
+.formulaire{
+    text-align: center;
+    margin: 2em 0em 2em 0em;
+}
+
+.instru{
+    background-color: #000;
+    width: 13.5em;
+    font-size: 55px;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FFBD00;
+    border-radius: 20px;
+    height: auto;
+}
+
+.regles{
+    display: flex;
+    background-color: red;
+    width: auto;
+    height: 2em;
+    border-radius: 7.5px;
+    justify-content: center;
+    margin: auto;
+}
+
+.instructions{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: justify;
+    width: 35em;
+    margin: 5em auto 0 auto;
+    /* background-color: red; */
+    background: linear-gradient(to top right, #1B7C34, #2BBA50);
+    padding: 20px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 5px;
+}
+
+/* /////////////////////////////
+
+            Texte
+
+///////////////////////////// */
+
+.para{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.para2{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.para:hover{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 51px;
+}
+
+.para2:hover{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.reponse{
+    margin: 0em;
+    width: 13.5em;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #5DAB48;
+    border-radius: 20px;
+}
+
+.texte_regles{
+    width: auto;
+    margin-left: auto;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.texte_regles:hover{
+    color: black;
+    font-size: 22px;
+}
+
+.texte_instructions{
+    margin: 0;
+}
+
+/* /////////////////////////////
+
+            Tableau
+
+///////////////////////////// */
+
+td
+{
+    border: 1px solid black;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td[scope="equipe_rouge"]{
+    color: red;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+td[scope="equipe_bleue"]{
+    color: blue;
+    font-size: 2em;
+    font-weight: bold;
 }
