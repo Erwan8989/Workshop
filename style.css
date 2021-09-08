@@ -326,6 +326,15 @@
     border-radius: 5px;
 }
 
+.formulaire_balle{
+    margin : 1em auto 0 auto;
+    width: 15em;
+}
+
+.bloc_balle{
+    margin-top: 10em;
+}
+
 /* /////////////////////////////
 
             Texte
@@ -370,6 +379,15 @@
     border-radius: 20px;
 }
 
+.reponse_balle{
+    margin: 0em;
+    width: 2.5em;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #5DAB48;
+    border-radius: 20px;
+}
 .texte_regles{
     width: auto;
     margin-left: auto;

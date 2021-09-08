@@ -34,6 +34,11 @@ $reponse = "";
 $Reset = "";
 $donnees2 = "";
 
+if(isset($_POST['balle']))
+{
+    $_SESSION['balle'] = $_POST['balle'];
+}
+
 ?>
 
 <div class="container-fluid mt-5">
@@ -81,9 +86,6 @@ $donnees2 = "";
                 </div>
 	        </div>
         </div>
-
-
-
     </div>
     <div class="row">
         <div class="col-1 p-0">
@@ -245,7 +247,11 @@ $donnees2 = "";
                 <p class="instru_">
                     <?php
                     if(($point1 - $point2 == 3) || ($point2 - $point1 == 3)){
-                        $_SESSION['instruction3'] = "Ajoutez 3 balles !";
+                        
+                        $nombre_balle = rand(2, $_SESSION['balle']);
+
+                        $_SESSION['instruction3'] = "Ajoutez $nombre_balle balles !";
+                        
                         echo $_SESSION['instruction3'];
                     }
                     elseif(($point1 - $point2 ==4) || ($point2 - $point1 ==4)){

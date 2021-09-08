@@ -22,24 +22,19 @@
 </head>
 <body>
 
-<div class="container-fluid bloc_principal">
-    <div class="row">
-        <div class="col">
-            <p class="bloc3">Combien de joueur êtes-vous ?</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="rouge bloc2">
-                <a href="nombre_balle.php"> <input class="button1" type="button" value="1 vs 1" >
 
-            </div>
-            <div class="bleu bloc2">
-                <a href="nombre_balle.php"> <input class="button2" type="button" value="2 vs 2" >
-            </div>
-        </div>
+    <div class="bloc_balle">
+        <p class="bloc3">Combien de balle avez-vous ?</p>
     </div>
-</div>
+    <div class="formulaire_balle">
+        <form action="jeu.php?i=1&j=1" method="post" class="form-example">
+            <div class="form-example">
+                <input type="text" name="balle" id="name" class="reponse_balle" required>
+                <input type="submit" class="reponse_bloc4" value="Valider">
+                
+            </div>
+        </form>
+    </div>
 
 <!-- Optional JavaScript; choose one of the two! -->
 
