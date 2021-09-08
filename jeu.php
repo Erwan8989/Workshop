@@ -49,6 +49,7 @@ $donnees2 = "";
                     $req->execute();
                     unset($_SESSION['instruction']);
                     unset($_SESSION['question']);
+                    $_SESSION['instruction3'];
                 }
 
                 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
@@ -69,15 +70,14 @@ $donnees2 = "";
 		        <h2>Règles</h2>
 		        <a class="close" href="#">&times;</a>
                 <div class="content"> Pendant votre partie de baby-foot, si l'un de vous parviens à mettre un but dans la cage adverse, il devra répondre à une question !
-Bonne ou mauvaise réponse, la suite vous réserve des surprises ! 
-<br> <br>
-                                                                                                                       
-Cette plateforme va vous permettre de jouer au baby-foot avec vos ami(e)s, en y ajoutant des éléments qui vont changer le mode de jeu. 
-<br> <br>
-Dès qu'un but est marqué, ajoutez un point. Une question est alors posée à l'équipe venant de gagner un point. 
-Selon vos réponses, des instructions seront affichées en dessous. Appliquez-les jusqu'au prochain but. 
-
-Bonnes parties ! 
+                    Bonne ou mauvaise réponse, la suite vous réserve des surprises ! 
+                    <br> <br>                                                                                                          
+                    Cette plateforme va vous permettre de jouer au baby-foot avec vos ami(e)s, en y ajoutant des éléments qui vont changer le mode de jeu. 
+                    <br> <br>
+                    Dès qu'un but est marqué, ajoutez un point. Une question est alors posée à l'équipe venant de gagner un point. 
+                    Selon vos réponses, des instructions seront affichées en dessous. Appliquez-les jusqu'au prochain but. 
+                    <br> <br>
+                    Bonnes parties ! 
                 </div>
 	        </div>
         </div>
@@ -106,7 +106,8 @@ Bonnes parties !
                         $donnees2 = $req->fetch(); 
                         $_SESSION['question'] = $donnees2['question'];  
                         $_SESSION['reponse'] = $donnees2['reponse'];    
-                        unset($_SESSION['instruction']);           
+                        unset($_SESSION['instruction']);  
+                        unset($_SESSION['instruction2']);         
                     }
                     
 
@@ -151,6 +152,7 @@ Bonnes parties !
 
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
+                            $point1 = $donnees['points'];
                         }?>
                     </td>
 
@@ -162,6 +164,7 @@ Bonnes parties !
                         
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
+                            $point2 = $donnees['points'];
                         }?>
                     </td>
                 </tr>
@@ -184,15 +187,27 @@ Bonnes parties !
         <div class="col-6">
             <div class="bloc4">
                 <?php
-                if(isset($donnees2['question'])){
-                    echo $donnees2['question'];
+                if(($point1 - $point2 ==3) || ($point2 - $point1 ==3)){
+                    $_SESSION['instruction2'] = "Différence de 3 points !";
+                    echo $_SESSION['instruction2'];
                 }
-                elseif(isset($_SESSION['question'])){
-                    echo $_SESSION['question'];
-                } 
+                elseif(($point1 - $point2 >=4) || ($point2 - $point1 >=4)){
+                    $_SESSION['instruction2'] = "Différence de 4 points et plus !";
+                    echo $_SESSION['instruction2'];
+                }
+
                 else{
-                    echo "Les questions apparaîtront ici !";
-                }                 
+                    if(isset($donnees2['question'])){
+                        echo $donnees2['question'];
+                    }
+                    elseif(isset($_SESSION['question'])){
+                        echo $_SESSION['question'];
+                    } 
+                    else{
+                        echo "Les questions apparaîtront ici !";
+                    }  
+                }
+                               
                 ?>
             </div>
             <div>
@@ -229,15 +244,25 @@ Bonnes parties !
             <div class="instru">
                 <p class="instru_">
                     <?php
-                    if(isset($_SESSION['instruction'])){
-                        echo $_SESSION['titre'];
-                        ?> <br><?php
-                        echo $_SESSION['instruction'];;
+                    if(($point1 - $point2 == 3) || ($point2 - $point1 == 3)){
+                        $_SESSION['instruction3'] = "Ajoutez 3 balles !";
+                        echo $_SESSION['instruction3'];
+                    }
+                    elseif(($point1 - $point2 ==4) || ($point2 - $point1 ==4)){
+                        echo '';
+                        $_SESSION['instruction3'] = "Une équipe semble en difficulté... Pour rééquilibrer le match, chaque joueur tourne de 1 vers la droite. Bon match !";
+                    echo $_SESSION['instruction3'];
                     }
                     else{
-                        echo "Les instructions apparaitront ici !";
+                        if(isset($_SESSION['instruction'])){
+                            echo $_SESSION['titre'];
+                            ?> <br><?php
+                            echo $_SESSION['instruction'];;
+                        }
+                        else{
+                            echo "Les instructions apparaitront ici !";
+                        }
                     }
-                    
                     ?>
                 </p>
             </div>
