@@ -156,7 +156,7 @@ $donnees2 = "";
             <div class="bloc4">
                 <?php
                 if(isset($donnees2['question'])){
-                    echo $donnees2['question'];  
+                    echo $donnees2['question'];
                 }
                 else{
                     echo "Les questions apparaîtront ici !";
@@ -175,7 +175,16 @@ $donnees2 = "";
 
                 <?php 
 
+                    var_dump($_POST['name']);                    
+                    echo $donnees2['reponse'];
 
+
+                    if($_POST['name'] == $donnees2['reponse']){
+                        echo 'Hello';
+                    }
+                    else{
+                        
+                    }
                       
 
                         // $reponse = "";
