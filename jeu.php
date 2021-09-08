@@ -31,6 +31,7 @@ $mov = "";
 $mov2 = "";
 $reponse = "";
 $Reset = "";
+$donnees2 = "";
 
 ?>
 
@@ -76,7 +77,12 @@ $Reset = "";
                     {
                         $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=1");
                         $req->execute();
+                        $req=$conn->prepare("SELECT * FROM question ORDER BY rand()");
+                        $req->execute();    
+                        $donnees2 = $req->fetch();                  
                     }
+
+                    
 
                     // Conditions pour points equipes 2
 
@@ -87,6 +93,9 @@ $Reset = "";
                     if($mov2=='+1 point'){
                         $req=$conn->prepare("UPDATE score set points = points + 1 WHERE id=2");
                         $req->execute();
+                        $req=$conn->prepare("SELECT * FROM question ORDER BY rand()");
+                        $req->execute();    
+                        $donnees2 = $req->fetch();                         
                     }
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
@@ -145,9 +154,15 @@ $Reset = "";
         </div>
         <div class="col-6">
             <div class="bloc4">
-                <p>
-                    Avec la laine de quel animal fait on du cachemire ?
-                </p>
+                <?php
+                if(isset($donnees2['question'])){
+                    echo $donnees2['question'];  
+                }
+                else{
+                    echo "Les questions apparaîtront ici !";
+                }
+                                     
+                ?>
             </div>
             <div>
                 <form action="" method="post" class="form-example formulaire">
