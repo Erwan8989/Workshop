@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 08 sep. 2021 à 09:02
--- Version du serveur :  8.0.21
+-- Généré le : mer. 08 sep. 2021 à 09:52
+-- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `bonus`;
 CREATE TABLE IF NOT EXISTS `bonus` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `titre` text COLLATE utf8_unicode_ci NOT NULL,
   `instruction` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `bonus`
@@ -41,7 +41,14 @@ CREATE TABLE IF NOT EXISTS `bonus` (
 
 INSERT INTO `bonus` (`id`, `titre`, `instruction`) VALUES
 (1, 'Bonus', 'Blabla bonus'),
-(2, 'Bonus', 'Blabla 22222 Bonus');
+(2, 'Bonus', 'Blabla 22222 Bonus'),
+(3, 'Bonne réponse ! \r\n  ', 'Si au prochain tour tu as un malus, tu peux le garder OU le donner a l\'équipe adverse. Que vas tu choisir ?'),
+(4, 'Bonne réponse ! ', 'Tu as obtenus un JOKER, tu peux ne pas réaliser l\'action donnée en cas de malus.'),
+(5, 'Bonne réponse ! ', 'TIRE AU BUT ! Réalise ton plus beau tir avec tes attaquants !'),
+(6, 'Bonne réponse !', 'Tu gagnes un point bonus !'),
+(7, 'Bonne réponse ! ', 'Au prochain tour si tu mets un but avec la défense, le point compte triple.'),
+(8, 'Bonne réponse ! ', 'Lors du prochain tour, le but compte double.'),
+(9, 'Bonne réponse !', 'Lorsque tes attaquants détiennent la balle, la défense adverse te laisse le champ libre. Bon courage au gardien !');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
