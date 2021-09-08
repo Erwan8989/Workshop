@@ -251,7 +251,7 @@ if(isset($_POST['balle']))
                         $nombre_balle = rand(2, $_SESSION['balle']);
 
                         $_SESSION['instruction3'] = "Ajoutez $nombre_balle balles !";
-                        
+
                         echo $_SESSION['instruction3'];
                     }
                     elseif(($point1 - $point2 ==4) || ($point2 - $point1 ==4)){
@@ -266,7 +266,7 @@ if(isset($_POST['balle']))
                             echo $_SESSION['instruction'];;
                         }
                         else{
-                            echo "Les instructions apparaitront ici !";
+                            echo "Les instructions apparaîtront ici !";
                         }
                     }
                     ?>
