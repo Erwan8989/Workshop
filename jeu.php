@@ -24,6 +24,7 @@
 
 <?php
 include('bdd.php');
+session_start();
 
 $i = $_GET['i'];
 $j = $_GET['j'];
@@ -46,6 +47,8 @@ $donnees2 = "";
                 if($Reset=='Reset'){
                     $req=$conn->prepare("UPDATE score set points = 0");
                     $req->execute();
+                    unset($_SESSION['instruction']);
+                    unset($_SESSION['question']);
                 }
 
                 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
@@ -87,9 +90,6 @@ Bonnes parties !
             <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
-
-                    @session_start();
-
                     // Conditions pour points equipes 1
 
                     if (isset($_POST['mov'])) {
@@ -105,7 +105,8 @@ Bonnes parties !
                         $req->execute();    
                         $donnees2 = $req->fetch(); 
                         $_SESSION['question'] = $donnees2['question'];  
-                        $_SESSION['reponse'] = $donnees2['reponse'];               
+                        $_SESSION['reponse'] = $donnees2['reponse'];    
+                        unset($_SESSION['instruction']);           
                     }
                     
 
@@ -120,7 +121,10 @@ Bonnes parties !
                         $req->execute();
                         $req=$conn->prepare("SELECT * FROM question ORDER BY rand()");
                         $req->execute();    
-                        $donnees2 = $req->fetch();                         
+                        $donnees2 = $req->fetch();    
+                        $_SESSION['question'] = $donnees2['question'];  
+                        $_SESSION['reponse'] = $donnees2['reponse'];  
+                        unset($_SESSION['instruction']);                    
                     }
 
                     echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST>';
@@ -187,7 +191,7 @@ Bonnes parties !
                     echo $_SESSION['question'];
                 } 
                 else{
-                    echo "Les questions apparaitront ici !";
+                    echo "Les questions apparaîtront ici !";
                 }                 
                 ?>
             </div>
@@ -203,39 +207,20 @@ Bonnes parties !
                 <?php 
                     if(isset($_POST['name'])){
                         if($_POST['name'] == $_SESSION['reponse']){
-                            echo 'Hello';
                             $req=$conn->prepare("SELECT * FROM bonus ORDER BY rand()");
                             $req->execute();
                             $donnees3 = $req->fetch();
-                            echo $donnees3['instruction'];
+                            $_SESSION['instruction'] = $donnees3['instruction'];
+                            $_SESSION['titre'] = $donnees3['titre'];
                         }
                         else{
-                            
+                            $req=$conn->prepare("SELECT * FROM malus ORDER BY rand()");
+                            $req->execute();
+                            $donnees3 = $req->fetch();
+                            $_SESSION['instruction'] = $donnees3['instruction'];
+                            $_SESSION['titre'] = $donnees3['titre'];
                         }
                     }
-
-                        // $reponse = "";
-                        
-
-                       
-                        // $req=$conn->prepare("SELECT * FROM question ORDER BY RAND);
-                        // $req->execute([$_POST['valeur']])
-                        
-
-                        
-                        // $reponse = $req->fetch();  
-                        // if($reponse){  
-                        //     $erreurs['nom'] ="Ce nom exixte";  
-                        // }elseif ($user != $_POST['nom']) {  
-                        // $erreurs['nom'] ="Votre nom n'est pas le même veillez revérifier";  
-                        
-
-
-
-                        
-                        // while ($donnees = $req->fetch()){
-                        //     echo $donnees['points'];
-                        // }
                         
                 ?>
                 
@@ -243,7 +228,17 @@ Bonnes parties !
             
             <div class="instru">
                 <p class="instru_">
-                    Instructions
+                    <?php
+                    if(isset($_SESSION['instruction'])){
+                        echo $_SESSION['titre'];
+                        ?> <br><?php
+                        echo $_SESSION['instruction'];;
+                    }
+                    else{
+                        echo "Les instructions apparaitront ici !";
+                    }
+                    
+                    ?>
                 </p>
             </div>
         </div>
