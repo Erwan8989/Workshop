@@ -54,9 +54,33 @@ $donnees2 = "";
                 echo "</FORM>";
             ?>
         </div>
+
+
         <div class="col-6 regles">
-            <a href="/workshop/regles.php" target="_BLANK" class="texte_regles">Règles</a>
+            <a class="button" href="#popup1">Règles</a>
         </div>
+
+
+        <div id="popup1" class="overlay">
+	        <div class="popup">
+		        <h2>Règles</h2>
+		        <a class="close" href="#">&times;</a>
+                <div class="content"> Pendant votre partie de baby-foot, si l'un de vous parviens à mettre un but dans la cage adverse, il devra répondre à une question !
+Bonne ou mauvaise réponse, la suite vous réserve des surprises ! 
+<br> <br>
+                                                                                                                       
+Cette plateforme va vous permettre de jouer au baby-foot avec vos ami(e)s, en y ajoutant des éléments qui vont changer le mode de jeu. 
+<br> <br>
+Dès qu'un but est marqué, ajoutez un point. Une question est alors posée à l'équipe venant de gagner un point. 
+Selon vos réponses, des instructions seront affichées en dessous. Appliquez-les jusqu'au prochain but. 
+
+Bonnes parties ! 
+                </div>
+	        </div>
+        </div>
+
+
+
     </div>
     <div class="row">
         <div class="col-1 p-0">
@@ -183,7 +207,7 @@ $donnees2 = "";
                             $req=$conn->prepare("SELECT * FROM bonus ORDER BY rand()");
                             $req->execute();
                             $donnees3 = $req->fetch();
-                            $_SESSION['instruction'] = $donnees3['instruction'];
+                            echo $donnees3['instruction'];
                         }
                         else{
                             
@@ -219,15 +243,7 @@ $donnees2 = "";
             
             <div class="instru">
                 <p class="instru_">
-                    <?php
-                    if(isset($_SESSION['instruction'])){
-                        echo $_SESSION['instruction'];;
-                    }
-                    else{
-                        echo "Les instructions apparaitront ici !";
-                    }
-                    
-                    ?>
+                    Instructions
                 </p>
             </div>
         </div>
