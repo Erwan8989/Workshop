@@ -79,9 +79,10 @@ $donnees2 = "";
                         $req->execute();
                         $req=$conn->prepare("SELECT * FROM question ORDER BY rand()");
                         $req->execute();    
-                        $donnees2 = $req->fetch();                  
+                        $donnees2 = $req->fetch(); 
+                        $_SESSION['question'] = $donnees2['question'];  
+                        $_SESSION['reponse'] = $donnees2['reponse'];               
                     }
-
                     
 
                     // Conditions pour points equipes 2
@@ -156,12 +157,11 @@ $donnees2 = "";
             <div class="bloc4">
                 <?php
                 if(isset($donnees2['question'])){
-                    echo $donnees2['question'];  
+                    echo $donnees2['question'];
                 }
                 else{
-                    echo "Les questions apparaîtront ici !";
-                }
-                                     
+                    echo $_SESSION['question'];
+                }                  
                 ?>
             </div>
             <div>
@@ -174,9 +174,14 @@ $donnees2 = "";
                 </form>
 
                 <?php 
-
-
-                      
+                    if(isset($_POST['name'])){
+                        if($_POST['name'] == $_SESSION['reponse']){
+                            echo 'Hello';
+                        }
+                        else{
+                            
+                        }
+                    }
 
                         // $reponse = "";
                         
