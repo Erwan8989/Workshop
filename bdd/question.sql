@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 09 sep. 2021 à 10:26
--- Version du serveur :  5.7.31
+-- Généré le : jeu. 09 sep. 2021 à 14:15
+-- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `question`;
 CREATE TABLE IF NOT EXISTS `question` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `question` text COLLATE utf8_unicode_ci NOT NULL,
-  `reponse` text COLLATE utf8_unicode_ci NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `question` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `reponse` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -44,21 +44,21 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (4, 'Avec la laine de quel animal fait on du cachemire ?', 'chevre'),
 (5, 'Le 14 juillet existe t\'il en Tanzanie ?', 'oui'),
 (6, 'Combien y a t-il de paires de chaussettes dans une vingtaine ?', '10'),
-(7, 'Dans quel état des Etats-Unis le Grand Canyon se trouve-t-il ?', 'Arizona'),
-(8, 'Quel était l\'instrument de prédilection de Yehudi ?', 'le violon'),
+(7, 'Dans quel état des Etats-Unis le Grand Canyon se trouve-t-il ?', 'arizona'),
+(8, 'Quel était l\'instrument de prédilection de Yehudi ?', 'violon'),
 (9, 'Quelle est la hauteur du Mont Blanc ?', '4809'),
-(10, 'Quel fleuve traverse le Liban, la Syrie et la Turquie ?', 'L\'oronte'),
+(10, 'Quel fleuve traverse le Liban, la Syrie et la Turquie ?', 'oronte'),
 (11, 'Quand est ce qu\'est apparu blanche neige et les sept nains pour la première fois ?', ' 1937'),
 (12, 'Combien il y a de joueur sur un terrain de football ?', '11'),
 (13, ' La superficie de la France est elle supérieure à 600 000 km ?', 'oui'),
 (14, 'Combien de pattes ont les animaux hexapodes ?', '6'),
-(15, 'Quel club de football détient le record du nombre de victoires en Ligue des Champion ?', 'Bayern Munich'),
-(16, 'Qui a remporté le plus de fois le Ballon d\'or ?', 'Lionel Messi'),
+(15, 'Quel club de football détient le record du nombre de victoires en Ligue des Champion ?', 'bayern munich'),
+(16, 'Qui a remporté le plus de fois le Ballon d\'or ?', 'lionel messi'),
 (17, 'Combien de fois le Real de Madrid a-t-il gagné la ligue des champions  ?', '13'),
-(18, 'Quel quartier est mis sous les feux de la rampe dans Amélie Poulain ?', 'Montmartre'),
-(19, 'A quel autre animal ressemble le wallaby ?', 'Kangourou\r\n'),
-(20, '\r\nQuelle note de musique est également appelée  ut  ?', 'Do'),
-(21, 'Qui est l\'auteur de Moby Dick ?', 'Herman Melville'),
+(18, 'Quel quartier est mis sous les feux de la rampe dans Amélie Poulain ?', 'montmartre'),
+(19, 'A quel autre animal ressemble le wallaby ?', 'kangourou\r\n'),
+(20, '\r\nQuelle note de musique est également appelée  ut  ?', 'do'),
+(21, 'Qui est l\'auteur de Moby Dick ?', 'herman melville'),
 (22, 'Combien y a t\'il d\'Etoile sur le drapeau européen ?', '12'),
 (23, 'Quel titre de noblesse est immédiatement inférieur à celui de comte ?', 'vicomte'),
 (24, 'De quelle série de six films un champion de boxe est-il la vedette ? ', 'rocky'),
@@ -71,8 +71,8 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (31, 'Quel est le nom du scientifique professeur, ami de Tintin ?', 'tournesol'),
 (32, 'Le premier pays a avoir gagné la Coupe du monde de Football est :', 'uruguay'),
 (33, 'De quelle origine est la firme aéronautique Boeing ?', 'americaine'),
-(34, 'Quel géant fut vaincu par David ?', 'Goliath'),
-(35, 'Aux États-Unis, quels types de claviers utilise-t-on ? ', 'qwerty\r\n'),
+(34, 'Quel géant fut vaincu par David ?', 'goliath'),
+(35, 'Aux États-Unis, quels types de claviers utilise-t-on ? ', 'qwerty'),
 (36, 'En espagnol, que signifie le mot \" corazon \" ?', 'coeur');
 COMMIT;
 
