@@ -32,6 +32,7 @@ session_start();
                 <input type="text" name="balle" id="name" class="reponse_balle" required>
                 <label><p class="bloc3">Jusqu'à combien de point voulez-vous jouer pour gagner ?</p></label>
                 <input type="text" name="point" id="name" class="reponse_balle" required>
+                <input type="hidden" name="reset" id="name" class="reponse_balle" required>
                 <input type="submit" class="reponse_bloc4" value="Valider">
             </div>
         </form>
@@ -45,6 +46,7 @@ session_start();
             else{
                 $_SESSION['balle'] = $_POST['balle'];
                 $_SESSION['point'] = $_POST['point'];
+                $_SESSION['reset'] = $_POST['reset'];
                 header('Location: jeu.php?i=1&j=1');
             }
         }

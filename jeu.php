@@ -40,7 +40,7 @@ $donnees2 = "";
     <div class="row ">
         <div class="col-6">
             <?php 
-                if (isset($_POST['Reset'])) {
+                if (isset($_POST['Reset']) || isset($_SESSION['reset'])) {
                     $Reset=$_POST['Reset'];
                 }
                 
@@ -148,6 +148,9 @@ $donnees2 = "";
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
                             $point1 = $donnees['points'];
+                            if($point1 == $_SESSION['point']){
+                                echo 'METTRE POPOPUP';
+                            }
                         }?>
                     </td>
 
@@ -160,7 +163,12 @@ $donnees2 = "";
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
                             $point2 = $donnees['points'];
-                        }?>
+                            if($point2 == $_SESSION['point']){
+                                echo 'METTRE POPOPUP';
+                            }
+                        }
+                        
+                        ?>
                     </td>
                 </tr>
                 </tbody>
