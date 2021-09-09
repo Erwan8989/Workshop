@@ -32,7 +32,6 @@ session_start();
         <form action="" method="post" class="form-example">
             <div class="form-example">
                 <input type="text" name="balle" id="name" class="reponse_balle" required>
-                <input type="submit" class="reponse_bloc4" value="Valider">
             </div>
         </form>
         <?php
@@ -47,6 +46,19 @@ session_start();
         }
         ?>
     </div>
+
+    <div>
+    <div class="bloc_balle">
+        <p class="bloc3">Jusqu'à combien de point voulez-vous jouer pour gagner ?</p>
+    </div>
+    <form action="" method="post" class="form-example bloc_reponse_balle">
+            <div class="form-example">
+                <input type="text" name="balle" id="name" class="reponse_balle" required>
+                <input type="submit" class="reponse_bloc4" value="Valider">
+            </div>
+        </form>
+    </div>
+    
 
 <!-- Optional JavaScript; choose one of the two! -->
 
