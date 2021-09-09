@@ -188,13 +188,13 @@ $donnees2 = "";
             </table>
             <div>
                 <?php
+                
                 if($point1 == $_SESSION['point']){
                     echo 'L\'équipe rouge gagne';
                 }
                 elseif($point2 == $_SESSION['point']){
                     echo 'L\'équipe bleue gagne';
                 }
-
 
                 ?>
             </div>
