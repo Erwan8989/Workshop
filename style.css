@@ -306,11 +306,11 @@
     border-radius: 7.5px;
     justify-content: center;
     margin: auto;
-    position: relative;
-    top: 38em;
-    right: 67em;
     font-style: oblique;
     font-weight: bold;
+    align-self: flex-start;
+    margin-inline: 2em;
+    margin-top: 12em;
 }
 
 .instructions{
