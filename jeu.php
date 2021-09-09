@@ -200,8 +200,8 @@ $donnees2 = "";
                     $_SESSION['instruction2'] = "Différence de 3 points !";
                     echo $_SESSION['instruction2'];
                 }
-                elseif(($point1 - $point2 >=4) || ($point2 - $point1 >=4)){
-                    $_SESSION['instruction2'] = "Différence de 4 points et plus !";
+                elseif(($point1 - $point2 == 4) || ($point2 - $point1 == 4)){
+                    $_SESSION['instruction2'] = "Différence de 4 points !";
                     echo $_SESSION['instruction2'];
                 }
 
@@ -261,7 +261,7 @@ $donnees2 = "";
 
                         echo $_SESSION['instruction3'];
                     }
-                    elseif(($point1 - $point2 ==4) || ($point2 - $point1 ==4)){
+                    elseif(($point1 - $point2 ==4) || ($point2 - $point1 == 4)){
                         echo '';
                         $_SESSION['instruction3'] = "Une équipe semble en difficulté... Pour rééquilibrer le match, chaque joueur tourne de 1 vers la droite. Bon match !";
                     echo $_SESSION['instruction3'];
