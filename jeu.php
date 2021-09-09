@@ -56,7 +56,7 @@ $donnees2 = "";
                     $req->execute();
                     unset($_SESSION['instruction']);
                     unset($_SESSION['question']);
-                    $_SESSION['instruction3'];
+                    unset($_SESSION['reset']);
                 }
 
                 echo '<FORM ACTION="jeu.php?i=1&j=1" METHOD=POST class="form"> ';
@@ -151,21 +151,15 @@ $donnees2 = "";
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
                             $point1 = $donnees['points'];
-
+                        }
                             if($point1 == $_SESSION['point']){ ?>
 
                             <section class="text">
                                 <p class="text_description">L'équipe rouge à gagné !</p>
                             </section> 
-            
-            
-
-                         }                         
+                        <?php
+                         } ?>                        
                     </td>
-
-
-            
-
                       <td><?php 
                         if($i == 1){
                             $req=$conn->prepare("SELECT * FROM score WHERE id=2");
@@ -175,14 +169,6 @@ $donnees2 = "";
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
                             $point2 = $donnees['points'];
-
-                            ?> 
-                            
-                     
-                            <?php
-
-
-
 
                             if($point2 == $_SESSION['point']){
                                 echo 'METTRE POPOPUP';
