@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 08 sep. 2021 à 11:05
+-- Généré le : jeu. 09 sep. 2021 à 10:26
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `question`;
 CREATE TABLE IF NOT EXISTS `question` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `question` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `reponse` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question` text COLLATE utf8_unicode_ci NOT NULL,
+  `reponse` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -43,7 +43,7 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (3, 'Combien de joueur y a t il dans une équipe de hockey sur glace ?', '20'),
 (4, 'Avec la laine de quel animal fait on du cachemire ?', 'chevre'),
 (5, 'Le 14 juillet existe t\'il en Tanzanie ?', 'oui'),
-(6, 'Combien y a t-il de paires de chausettes dans une vingtaine ?', '10'),
+(6, 'Combien y a t-il de paires de chaussettes dans une vingtaine ?', '10'),
 (7, 'Dans quel état des Etats-Unis le Grand Canyon se trouve-t-il ?', 'Arizona'),
 (8, 'Quel était l\'instrument de prédilection de Yehudi ?', 'le violon'),
 (9, 'Quelle est la hauteur du Mont Blanc ?', '4809'),
@@ -70,8 +70,8 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (30, 'De quelle couleur est le personnage Pacman ?', ' jaune'),
 (31, 'Quel est le nom du scientifique professeur, ami de Tintin ?', 'tournesol'),
 (32, 'Le premier pays a avoir gagné la Coupe du monde de Football est :', 'uruguay'),
-(33, 'e quelle origine est la firme aéronautique Boeing ?', 'americaine'),
-(34, 'Quel géant fut vaincun par David ?', 'Goliath'),
+(33, 'De quelle origine est la firme aéronautique Boeing ?', 'americaine'),
+(34, 'Quel géant fut vaincu par David ?', 'Goliath'),
 (35, 'Aux États-Unis, quels types de claviers utilise-t-on ? ', 'qwerty\r\n'),
 (36, 'En espagnol, que signifie le mot \" corazon \" ?', 'coeur');
 COMMIT;

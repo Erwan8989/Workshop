@@ -66,10 +66,6 @@ $donnees2 = "";
             ?>
         </div>
 
-
-        
-
-
         <div id="popup1" class="overlay">
 	        <div class="popup">
 		        <h2>Règles</h2>
@@ -92,6 +88,7 @@ $donnees2 = "";
             <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
+
                     // Conditions pour points equipes 1
 
                     if (isset($_POST['mov'])) {
@@ -112,7 +109,6 @@ $donnees2 = "";
                         unset($_SESSION['instruction2']);         
                     }
                     
-
                     // Conditions pour points equipes 2
 
                     if (isset($_POST['mov2'])) {
@@ -163,26 +159,14 @@ $donnees2 = "";
                             </section> 
             
             
-            <?php
 
-                          
-
-                                // echo('id="popup1"  class="overlay"  class="popup" class="close" class="content"');
-                                // header('Location: jeu.php?i=1&j=1#popup1'); 
-
-
-                         } }  ?>
-
-                        
+                         }                         
                     </td>
 
 
-                    
+            
 
-
-
-
-                    <td><?php 
+                      <td><?php 
                         if($i == 1){
                             $req=$conn->prepare("SELECT * FROM score WHERE id=2");
                             $req->execute();
@@ -244,8 +228,23 @@ $donnees2 = "";
             <div class="bloc4">
                 <?php
                 if(($point1 - $point2 ==3) || ($point2 - $point1 ==3)){
-                    $_SESSION['instruction2'] = "Différence de 3 points !";
-                    echo $_SESSION['instruction2'];
+                    if($_SESSION['balle'] == 1){
+                        
+                            if(isset($donnees2['question'])){
+                                echo $donnees2['question'];
+                            }
+                            elseif(isset($_SESSION['question'])){
+                                echo $_SESSION['question'];
+                            } 
+                            else{
+                                echo "Les questions apparaîtront ici !";
+                            }  
+                    }
+                    else{
+                        $_SESSION['instruction2'] = "Différence de 3 points !";
+                        echo $_SESSION['instruction2'];
+                    }
+                   
                 }
                 elseif(($point1 - $point2 == 4) || ($point2 - $point1 == 4)){
                     $_SESSION['instruction2'] = "Différence de 4 points !";
@@ -300,29 +299,43 @@ $donnees2 = "";
             <div class="instru">
                 <p class="instru_">
                     <?php
-                    if(($point1 - $point2 == 3) || ($point2 - $point1 == 3)){
-                        
-                        $nombre_balle = rand(2, $_SESSION['balle']);
 
-                        $_SESSION['instruction3'] = "Ajoutez $nombre_balle balles !";
-
+                        if(($point1 - $point2 == 3) || ($point2 - $point1 == 3)){
+                            if($_SESSION['balle'] == 1){
+                                if(isset($_SESSION['instruction'])){
+                                        echo $_SESSION['titre'];
+                                        ?> <br> <?php
+                                        echo $_SESSION['instruction'];;
+                                    }
+                                    else{
+                                        echo "Les instructions apparaîtront ici !";
+                                    }
+                            }
+                            else{
+                                $nombre_balle = rand(2, $_SESSION['balle']);
+    
+                            $_SESSION['instruction3'] = "Ajoutez $nombre_balle balles !";
+    
+                            echo $_SESSION['instruction3'];
+                            }
+                            
+                        }
+                        elseif(($point1 - $point2 == 4) || ($point2 - $point1 == 4)){
+                            echo '';
+                            $_SESSION['instruction3'] = "Une équipe semble en difficulté... Pour rééquilibrer le match, chaque joueur tourne de 1 vers la droite. Bon match !";
                         echo $_SESSION['instruction3'];
-                    }
-                    elseif(($point1 - $point2 ==4) || ($point2 - $point1 == 4)){
-                        echo '';
-                        $_SESSION['instruction3'] = "Une équipe semble en difficulté... Pour rééquilibrer le match, chaque joueur tourne de 1 vers la droite. Bon match !";
-                    echo $_SESSION['instruction3'];
-                    }
-                    else{
-                        if(isset($_SESSION['instruction'])){
-                            echo $_SESSION['titre'];
-                            ?> <br><?php
-                            echo $_SESSION['instruction'];;
                         }
                         else{
-                            echo "Les instructions apparaîtront ici !";
+                            if(isset($_SESSION['instruction'])){
+                                echo $_SESSION['titre'];
+                                ?> <br> <?php
+                                echo $_SESSION['instruction'];;
+                            }
+                            else{
+                                echo "Les instructions apparaîtront ici !";
+                            }
                         }
-                    }
+                    
                     ?>
                 </p>
             </div>

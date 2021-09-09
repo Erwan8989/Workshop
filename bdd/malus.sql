@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 08 sep. 2021 à 10:15
+-- Généré le : jeu. 09 sep. 2021 à 10:08
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
@@ -47,7 +47,6 @@ INSERT INTO `malus` (`id`, `titre`, `instruction`) VALUES
 (6, 'Mauvaise réponse ! ', 'N\'utilisez que les défenseur et les milieux de terrain pour jouer.'),
 (7, 'Mauvaise réponse ! ', 'Mets toi dos au babyfoot pour jouer lors de la prochaine partie.'),
 (8, 'Mauvaise réponse !', 'Croise tes mains pour jouer !'),
-(9, 'Mauvaise réponse !', 'Malheureusement tu perds 1 point.'),
 (10, 'Mauvaise réponse ! ', 'Les joueurs se mettent en position de squat pendant 20 secondes.'),
 (11, 'Mauvaise réponse !', 'Les joueurs se mettent en position de la chaise jusqu\'au au prochain but.'),
 (13, 'Mauvaise réponse ! ', 'Un des deux joueurs ne peux plus jouer pendant 20 secondes.'),
