@@ -33,6 +33,7 @@ $mov2 = "";
 $reponse = "";
 $Reset = "";
 $donnees2 = "";
+
 ?>
 
 <div class="container-fluid mt-5">
@@ -155,24 +156,31 @@ $donnees2 = "";
                             echo $donnees['points'];
                             $point1 = $donnees['points'];
 
-                            ?> 
+                            if($point1 == $_SESSION['point']){ ?>
 
-                            <!-- <div id="popup1" class="overlay">
-                                <div class="popup">
-                                    <h2>Règles</h2> -->
-                                    <!-- <a class="close" href="#">&times;</a>
-                                    <div class="content"> L'équipe rouge à gagné ! </div>
-                                </div>
-                            </div> --> 
-                            
+                            <section class="text">
+                                <p class="text_description">L'équipe rouge à gagné !</p>
+                            </section> 
+            
+            
+            <?php
 
-                            <?php
+                          
 
-                            if($point1 == $_SESSION['point']){
-                                echo "<INPUT TYPE=HIDDEN id=popup1 class=overlay class=popup>";
-                            }
-                        }?>
+                                // echo('id="popup1"  class="overlay"  class="popup" class="close" class="content"');
+                                // header('Location: jeu.php?i=1&j=1#popup1'); 
+
+
+                         } }  ?>
+
+                        
                     </td>
+
+
+                    
+
+
+
 
                     <td><?php 
                         if($i == 1){
@@ -186,12 +194,7 @@ $donnees2 = "";
 
                             ?> 
                             
-                            
-                            
-                            
-                            
-                            
-                            
+                     
                             <?php
 
 
@@ -207,6 +210,22 @@ $donnees2 = "";
                 </tr>
                 </tbody>
             </table>
+
+            <!-- <section class="texte">
+                <p class="texte_description">Vous avez gagné !</p>
+            </section> -->
+
+            <!-- <div id="popup1" class="overlay">
+	                        <div class="popup">
+		                     <h2>Règles</h2>
+		                     <a class="close" href="#">&times;</a>
+                             <div class="content"> 
+                                 Bonnes parties ! 
+                             </div>
+	                         </div>
+                            </div> -->
+
+
         </div>
         <div class="col-1 p-0">
             <div class="bloc2">
