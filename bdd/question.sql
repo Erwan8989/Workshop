@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 09 sep. 2021 à 09:04
+-- Généré le : jeu. 09 sep. 2021 à 10:26
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -43,7 +43,7 @@ INSERT INTO `question` (`id`, `question`, `reponse`) VALUES
 (3, 'Combien de joueur y a t il dans une équipe de hockey sur glace ?', '20'),
 (4, 'Avec la laine de quel animal fait on du cachemire ?', 'chevre'),
 (5, 'Le 14 juillet existe t\'il en Tanzanie ?', 'oui'),
-(6, 'Combien y a t-il de paires de chausettes dans une vingtaine ?', '10'),
+(6, 'Combien y a t-il de paires de chaussettes dans une vingtaine ?', '10'),
 (7, 'Dans quel état des Etats-Unis le Grand Canyon se trouve-t-il ?', 'Arizona'),
 (8, 'Quel était l\'instrument de prédilection de Yehudi ?', 'le violon'),
 (9, 'Quelle est la hauteur du Mont Blanc ?', '4809'),
