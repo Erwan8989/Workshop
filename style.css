@@ -377,6 +377,7 @@
     font-weight: bold;
     background-color: #5DAB48;
     border-radius: 20px;
+    outline: none;
 }
 
 .reponse_balle{
@@ -387,6 +388,7 @@
     font-weight: bold;
     background-color: #5DAB48;
     border-radius: 20px;
+    outline: none;
 }
 .texte_regles{
     width: auto;
