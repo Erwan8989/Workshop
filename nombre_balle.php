@@ -40,8 +40,14 @@ session_start();
 
     <?php
         if(isset($_POST['balle'])){
-            if($_POST['balle'] < 1 || $_POST['balle'] > 4 || $_POST['point'] < 1){
-                echo 'Veuillez entrer une valeur entre 1 et 4 balles, ou une valeure valide';
+            if($_POST['balle'] < 1 || $_POST['balle'] > 4 || $_POST['point'] < 1){ ?> 
+            
+            <div class="erreur">
+                <p class="p">Veillez entrer une valeur entre 1 et 4</p>
+            </div>
+    
+            <?php
+               
             }
             else{
                 $_SESSION['balle'] = $_POST['balle'];
@@ -50,6 +56,34 @@ session_start();
                 header('Location: jeu.php?i=1&j=1');
             }
         }
+    ?>
+
+    <?php
+
+    if(isset($_POST['point'])){
+        if($_POST['point'] < 1 || $_POST['point'] > 4){ ?> 
+        
+        <div class="erreur">
+            <p class="p">Veillez entrer une valeur valide</p>
+        </div>
+
+        <?php
+
+        // elseif($_POST['point'] < 1) {
+        //     $_POST['point'] < 1;
+        // }
+        
+        }
+        else{
+            $_SESSION['balle'] = $_POST['balle'];
+            $_SESSION['point'] = $_POST['point'];
+            $_SESSION['reset'] = $_POST['reset'];
+            header('Location: jeu.php?i=1&j=1');
+        }
+    }
+
+
+
     ?>
     
 

@@ -692,3 +692,12 @@ a:hover {
     transition-duration: 0.5s
     
 }
+
+.erreur {
+    background-color: #16792f;
+    margin: auto;
+}
+
+.p {
+    font-size: 15px;
+}
