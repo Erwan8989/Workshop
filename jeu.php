@@ -151,19 +151,6 @@ $donnees2 = "";
                             echo $donnees['points'];
                             $point1 = $donnees['points'];
 
-                            ?> 
-
-                            <!-- <div id="popup1" class="overlay">
-                                <div class="popup">
-                                    <h2>Règles</h2> -->
-                                    <!-- <a class="close" href="#">&times;</a>
-                                    <div class="content"> L'équipe rouge à gagné ! </div>
-                                </div>
-                            </div> --> 
-                            
-
-                            <?php
-
                             if($point1 == $_SESSION['point']){
                                 echo "<INPUT TYPE=HIDDEN id=popup1 class=overlay class=popup>";
                             }
@@ -188,7 +175,7 @@ $donnees2 = "";
             </table>
             <div>
                 <?php
-                
+
                 if($point1 == $_SESSION['point']){
                     echo 'L\'équipe rouge gagne';
                 }
