@@ -43,16 +43,18 @@ session_start();
             if($_POST['balle'] < 1 || $_POST['balle'] > 4){ ?> 
             
             <div class="erreur">
-                <p class="p">Veuillez entrer une valeur entre 1 et 4</p>
+                <p class="poste">Veuillez entrer une valeur entre 1 et 4</p>
             </div>
     
             <?php
                
             }
             elseif($_POST['point'] < 1){ ?>
-                <div class="erreur">
-                <p class="p">Veuillez entrer une valeur valide</p>
+                <div class="erreur1">
+                <p class="poste1">Veuillez entrer une valeur valide</p>
             </div>
+
+
             <?php
             }
             else{
