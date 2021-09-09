@@ -25,28 +25,33 @@
 session_start();
 ?>
 
-    <div class="bloc_balle">
-        <p class="bloc3">Combien de balle avez-vous ? (Entre 2 et 4)</p>
-    </div>
     <div class="formulaire_balle">
-        <form action="" method="post" class="form-example">
+        <form action="nombre_balle.php" method="post" class="form-example bloc_balle">
             <div class="form-example">
+                <label><p class="bloc3">Combien de balle avez-vous ? (Entre 2 et 4)</p></label>
                 <input type="text" name="balle" id="name" class="reponse_balle" required>
+                <label><p class="bloc3">Jusqu'à combien de point voulez-vous jouer pour gagner ?</p></label>
+                <input type="text" name="point" id="name" class="reponse_balle" required>
+                <input type="hidden" name="reset" id="name" class="reponse_balle" required>
                 <input type="submit" class="reponse_bloc4" value="Valider">
             </div>
         </form>
-        <?php
+    </div>
+
+    <?php
         if(isset($_POST['balle'])){
-            if($_POST['balle'] <= 1 || $_POST['balle'] > 4){
-                echo 'Veuillez entrer une valeur entre 2 et 4';
+            if($_POST['balle'] <= 1 || $_POST['balle'] > 4 || $_POST['point'] < 0){
+                echo 'Veuillez entrer une valeur entre 2 et 4 balles';
             }
             else{
                 $_SESSION['balle'] = $_POST['balle'];
+                $_SESSION['point'] = $_POST['point'];
+                $_SESSION['reset'] = $_POST['reset'];
                 header('Location: jeu.php?i=1&j=1');
             }
         }
-        ?>
-    </div>
+    ?>
+    
 
 <!-- Optional JavaScript; choose one of the two! -->
 

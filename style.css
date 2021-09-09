@@ -336,6 +336,17 @@
     margin-top: 10em;
 }
 
+.bloc_balle2{
+    margin-top: 2em;
+}
+
+.bloc_reponse_balle{
+    margin: 0 auto 0 auto;
+    width: 5em;
+    justify-content: center;
+    text-align: center;
+}
+
 /* /////////////////////////////
 
             Texte
@@ -382,14 +393,16 @@
 }
 
 .reponse_balle{
-    margin: 0em;
-    width: 2.5em;
+    margin: 0 auto 0 auto;
+    width: 5em;
     font-size: 30px;
     text-align: center;
     font-weight: bold;
     background-color: #5DAB48;
     border-radius: 20px;
     outline: none;
+    justify-content: center;
+    text-align: center;
 }
 .texte_regles{
     width: auto;
