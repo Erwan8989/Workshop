@@ -154,8 +154,22 @@ $donnees2 = "";
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
                             $point1 = $donnees['points'];
+
+                            ?> 
+
+                            <!-- <div id="popup1" class="overlay">
+                                <div class="popup">
+                                    <h2>Règles</h2> -->
+                                    <!-- <a class="close" href="#">&times;</a>
+                                    <div class="content"> L'équipe rouge à gagné ! </div>
+                                </div>
+                            </div> --> 
+                            
+
+                            <?php
+
                             if($point1 == $_SESSION['point']){
-                                echo 'METTRE POPOPUP';
+                                echo "<INPUT TYPE=HIDDEN id=popup1 class=overlay class=popup>";
                             }
                         }?>
                     </td>
@@ -169,6 +183,20 @@ $donnees2 = "";
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
                             $point2 = $donnees['points'];
+
+                            ?> 
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <?php
+
+
+
+
                             if($point2 == $_SESSION['point']){
                                 echo 'METTRE POPOPUP';
                             }
