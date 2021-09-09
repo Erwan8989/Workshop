@@ -242,13 +242,13 @@
 }
 
 .bloc3{
-    margin-left: auto;
-    margin-right: auto;
-    width: 13em;
-    font-size: 60px;
+    margin: auto;
+    width: 14em;
+    font-size: 54px;
     text-align: center;
     font-weight: bold;
     font-family: roblox;
+    padding-bottom: 15px;
 }
 
 .bloc4{
@@ -328,8 +328,8 @@
 }
 
 .formulaire_balle{
-    margin : 1em auto 0 auto;
-    width: 15em;
+    margin : auto;
+    width: 50%;
 }
 
 .bloc_balle{
@@ -401,8 +401,8 @@
     background-color: #5DAB48;
     border-radius: 20px;
     outline: none;
-    justify-content: center;
-    text-align: center;
+    display: flex;
+   
 }
 .texte_regles{
     width: auto;
