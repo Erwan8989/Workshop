@@ -65,9 +65,7 @@ if(isset($_POST['balle']))
         </div>
 
 
-        <div class="col-6 regles">
-            <a class="button" href="#popup1">Règles</a>
-        </div>
+        
 
 
         <div id="popup1" class="overlay">
@@ -272,6 +270,11 @@ if(isset($_POST['balle']))
                     ?>
                 </p>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 regles">
+                <a class="button" href="#popup1">Règles</a>
         </div>
     </div>
 </div>
