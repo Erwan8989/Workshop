@@ -281,7 +281,7 @@ $donnees2 = "";
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row_regles">
         <div class="col-6 regles">
                 <a class="button" href="#popup1">Règles</a>
         </div>
