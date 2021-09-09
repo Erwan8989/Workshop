@@ -28,7 +28,7 @@ session_start();
     <div class="formulaire_balle">
         <form action="nombre_balle.php" method="post" class="form-example bloc_balle">
             <div class="form-example">
-                <label><p class="bloc3">Combien de balle avez-vous ? (Entre 1 et 4)</p></label>
+                <label><p class="bloc3">Combien de balle avez-vous? (Entre 1 et 4)</p></label>
                 <input type="text" name="balle" id="name" class="reponse_balle" required>
                 <label><p class="bloc3">Jusqu'à combien de point voulez-vous jouer pour gagner ?</p></label>
                 <input type="text" name="point" id="name" class="reponse_balle" required>

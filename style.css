@@ -242,13 +242,16 @@
 }
 
 .bloc3{
-    margin: auto;
-    width: 14em;
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: auto;
     font-size: 54px;
     text-align: center;
     font-weight: bold;
     font-family: roblox;
     padding-bottom: 15px;
+    justify-content: center;
+    text-align: center;
 }
 
 .bloc4{
@@ -262,13 +265,16 @@
 }
 
 .reponse_bloc4{
-    margin: 0em;
+    display: flex;
+    margin: 0.75em auto 0 auto;
     width: 5em;
     font-size: 30px;
     text-align: center;
     font-weight: bold;
     background-color: #5DAB48;
     border-radius: 20px;
+    justify-content: center;
+    text-align: center;
 }
 
 .reponse_bloc4:hover{
@@ -329,11 +335,11 @@
 
 .formulaire_balle{
     margin : auto;
-    width: 50%;
+    width: 50em;
 }
 
 .bloc_balle{
-    margin-top: 10em;
+    margin: 10em auto 0em auto;
 }
 
 .bloc_balle2{
