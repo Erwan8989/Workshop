@@ -179,12 +179,6 @@ $donnees2 = "";
                         while ($donnees = $req->fetch()){
                             echo $donnees['points'];
                             $point2 = $donnees['points'];
-
-                            ?><?php
-
-                            if($point2 == $_SESSION['point']){
-                                echo 'METTRE POPOPUP';
-                            }
                         }
                         
                         ?>
@@ -192,6 +186,18 @@ $donnees2 = "";
                 </tr>
                 </tbody>
             </table>
+            <div>
+                <?php
+                if($point1 == $_SESSION['point']){
+                    echo 'L\'équipe rouge gagne';
+                }
+                elseif($point2 == $_SESSION['point']){
+                    echo 'L\'équipe bleue gagne';
+                }
+
+
+                ?>
+            </div>
         </div>
         <div class="col-1 p-0">
             <div class="bloc2">
@@ -317,7 +323,6 @@ $donnees2 = "";
                                 echo "Les instructions apparaîtront ici !";
                             }
                         }
-                    
                     
                     ?>
                 </p>
