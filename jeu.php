@@ -33,7 +33,6 @@ $mov2 = "";
 $reponse = "";
 $Reset = "";
 $donnees2 = "";
-
 ?>
 
 <div class="container-fluid mt-5">
@@ -41,7 +40,14 @@ $donnees2 = "";
         <div class="col-6">
             <?php 
                 if (isset($_POST['Reset']) || isset($_SESSION['reset'])) {
-                    $Reset=$_POST['Reset'];
+                    if(isset($_POST['Reset'])){
+                        $Reset=$_POST['Reset'];
+                    }
+                    else{
+                        unset($_SESSION['reset']);
+                        $Reset='Reset';
+                    }
+                    
                 }
                 
                 if($Reset=='Reset'){
