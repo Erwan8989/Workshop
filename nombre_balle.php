@@ -25,39 +25,30 @@
 session_start();
 ?>
 
-    <div class="bloc_balle">
-        <p class="bloc3">Combien de balle avez-vous ? (Entre 2 et 4)</p>
-    </div>
     <div class="formulaire_balle">
-        <form action="" method="post" class="form-example">
+        <form action="nombre_balle.php" method="post" class="form-example bloc_balle">
             <div class="form-example">
+                <label><p class="bloc3">Combien de balle avez-vous ? (Entre 2 et 4)</p></label>
                 <input type="text" name="balle" id="name" class="reponse_balle" required>
-            </div>
-        </form>
-        <?php
-        if(isset($_POST['balle'])){
-            if($_POST['balle'] <= 1 || $_POST['balle'] > 4){
-                echo 'Veuillez entrer une valeur entre 2 et 4';
-            }
-            else{
-                $_SESSION['balle'] = $_POST['balle'];
-                header('Location: jeu.php?i=1&j=1');
-            }
-        }
-        ?>
-    </div>
-
-    <div>
-    <div class="bloc_balle">
-        <p class="bloc3">Jusqu'à combien de point voulez-vous jouer pour gagner ?</p>
-    </div>
-    <form action="" method="post" class="form-example bloc_reponse_balle">
-            <div class="form-example">
-                <input type="text" name="balle" id="name" class="reponse_balle" required>
+                <label><p class="bloc3">Jusqu'à combien de point voulez-vous jouer pour gagner ?</p></label>
+                <input type="text" name="point" id="name" class="reponse_balle" required>
                 <input type="submit" class="reponse_bloc4" value="Valider">
             </div>
         </form>
     </div>
+
+    <?php
+        if(isset($_POST['balle'])){
+            if($_POST['balle'] <= 1 || $_POST['balle'] > 4 || $_POST['point'] < 0){
+                echo 'Veuillez entrer une valeur entre 2 et 4';
+            }
+            else{
+                $_SESSION['balle'] = $_POST['balle'];
+                $_SESSION['point'] = $_POST['point'];
+                header('Location: jeu.php?i=1&j=1');
+            }
+        }
+    ?>
     
 
 <!-- Optional JavaScript; choose one of the two! -->

@@ -335,8 +335,12 @@
     margin-top: 10em;
 }
 
+.bloc_balle2{
+    margin-top: 2em;
+}
+
 .bloc_reponse_balle{
-    margin: auto;
+    margin: 0 auto 0 auto;
     width: 5em;
     justify-content: center;
     text-align: center;
@@ -388,7 +392,7 @@
 }
 
 .reponse_balle{
-    margin: 0em;
+    margin: 0 auto 0 auto;
     width: 5em;
     font-size: 30px;
     text-align: center;
