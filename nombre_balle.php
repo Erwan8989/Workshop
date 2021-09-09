@@ -40,8 +40,8 @@ session_start();
 
     <?php
         if(isset($_POST['balle'])){
-            if($_POST['balle'] < 1 || $_POST['balle'] > 4 || $_POST['point'] < 0){
-                echo 'Veuillez entrer une valeur entre 1 et 4 balles';
+            if($_POST['balle'] < 1 || $_POST['balle'] > 4 || $_POST['point'] < 1){
+                echo 'Veuillez entrer une valeur entre 1 et 4 balles, ou une valeure valide';
             }
             else{
                 $_SESSION['balle'] = $_POST['balle'];

@@ -65,10 +65,6 @@ $donnees2 = "";
             ?>
         </div>
 
-
-        
-
-
         <div id="popup1" class="overlay">
 	        <div class="popup">
 		        <h2>Règles</h2>
@@ -91,6 +87,7 @@ $donnees2 = "";
             <div class="bloc2">
                 <!-- <a href="jeu.php" class="para2"><p class="para2">+1 point</p></a> -->
                 <?php
+
                     // Conditions pour points equipes 1
 
                     if (isset($_POST['mov'])) {
@@ -111,7 +108,6 @@ $donnees2 = "";
                         unset($_SESSION['instruction2']);         
                     }
                     
-
                     // Conditions pour points equipes 2
 
                     if (isset($_POST['mov2'])) {
@@ -184,18 +180,7 @@ $donnees2 = "";
                             echo $donnees['points'];
                             $point2 = $donnees['points'];
 
-                            ?> 
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            <?php
-
-
-
+                            ?><?php
 
                             if($point2 == $_SESSION['point']){
                                 echo 'METTRE POPOPUP';
