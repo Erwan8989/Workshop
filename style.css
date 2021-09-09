@@ -243,7 +243,7 @@
 
 .bloc3{
     margin: auto;
-    width: 14em;
+    width: auto;
     font-size: 54px;
     text-align: center;
     font-weight: bold;
@@ -333,7 +333,7 @@
 }
 
 .bloc_balle{
-    margin-top: 10em;
+    margin-top: 9em;
 }
 
 .bloc_balle2{
