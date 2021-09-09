@@ -170,31 +170,24 @@ $donnees2 = "";
                             echo $donnees['points'];
                             $point2 = $donnees['points'];
 
-                            if($point2 == $_SESSION['point']){
-                                echo 'METTRE POPOPUP';
-                            }
                         }
+
+                            if($point2 == $_SESSION['point']){ ?>
+
+                            <section class="text2">
+                                <p class="text_description">L'équipe bleu à gagné !</p>
+                            </section>
+
+                            <?php 
+                            } ?>
                         
-                        ?>
+                    
                     </td>
                 </tr>
                 </tbody>
             </table>
 
-            <!-- <section class="texte">
-                <p class="texte_description">Vous avez gagné !</p>
-            </section> -->
-
-            <!-- <div id="popup1" class="overlay">
-	                        <div class="popup">
-		                     <h2>Règles</h2>
-		                     <a class="close" href="#">&times;</a>
-                             <div class="content"> 
-                                 Bonnes parties ! 
-                             </div>
-	                         </div>
-                            </div> -->
-
+         
 
         </div>
         <div class="col-1 p-0">
