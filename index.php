@@ -24,11 +24,11 @@
 
 <div class="container-fluid bloc_principal">
     <div class="row">
-        <div class="col">
+        <div class="col mb-5">
             <p class="bloc3">Combien de joueur êtes-vous ?</p>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-5">
         <div class="col">
             <div class="rouge bloc2">
                 <a href="nombre_balle.php"> <input class="button1" type="button" value="1 vs 1" >

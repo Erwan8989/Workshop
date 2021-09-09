@@ -247,7 +247,6 @@ $donnees2 = "";
             <div>
                 <form action="" method="post" class="form-example formulaire">
                     <div class="form-example">
-                        <label for="name" class="reponse_bloc4">Réponse</label>
                         <input type="text" name="name" id="name" class="reponse" required>
                         <input type="submit" class="reponse_bloc4" value="Valider">
                     </div>
