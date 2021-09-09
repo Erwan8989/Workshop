@@ -34,9 +34,6 @@ $reponse = "";
 $Reset = "";
 $donnees2 = "";
 
-var_dump($_SESSION['balle']);
-var_dump($_SESSION['point']);
-
 ?>
 
 <div class="container-fluid mt-5">
