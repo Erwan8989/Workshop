@@ -21,19 +21,31 @@
     </style>
 </head>
 <body>
-
+<?php
+session_start();
+?>
 
     <div class="bloc_balle">
-        <p class="bloc3">Combien de balle avez-vous ?</p>
+        <p class="bloc3">Combien de balle avez-vous ? (Entre 2 et 4)</p>
     </div>
     <div class="formulaire_balle">
-        <form action="jeu.php?i=1&j=1" method="post" class="form-example">
+        <form action="" method="post" class="form-example">
             <div class="form-example">
                 <input type="text" name="balle" id="name" class="reponse_balle" required>
                 <input type="submit" class="reponse_bloc4" value="Valider">
-                
             </div>
         </form>
+        <?php
+        if(isset($_POST['balle'])){
+            if($_POST['balle'] <= 1 || $_POST['balle'] > 4){
+                echo 'Veuillez entrer une valeur entre 2 et 4';
+            }
+            else{
+                $_SESSION['balle'] = $_POST['balle'];
+                header('Location: jeu.php?i=1&j=1');
+            }
+        }
+        ?>
     </div>
 
 <!-- Optional JavaScript; choose one of the two! -->
