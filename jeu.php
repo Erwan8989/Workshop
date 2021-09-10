@@ -259,7 +259,7 @@ $donnees2 = "";
                             $req->execute();
                             $donnees3 = $req->fetch();
                             $_SESSION['instruction'] = $donnees3['instruction'];
-                            $_SESSION['titre'] = $donnees3['titre'];
+                            $_SESSION['titre']  = $donnees3['titre'];
                         }
                         else{
                             $req=$conn->prepare("SELECT * FROM malus ORDER BY rand()");
