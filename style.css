@@ -695,33 +695,47 @@ a:hover {
 }
 
 .erreur {
-    background-color: #red;
-    
-    WIDTH: 20%;
-    display: inline-flex;
-    POSITION: ABSOLUTE;
-    top: 17em;
-    left: 16em;
+    margin: 0 auto 0 auto;
+    width: 19em;
+    font-size: 25px;
+    /* text-align: center; */
+    font-weight: bold;
+    background-color: RED;
+    border-radius: 60px;
+    /* outline: none; */
+    display: flex;
+    justify-content: center;
+    /* justify-self: baseline; */
+    margin-top: 4px;
 }
 
-.p {
+.poste {
     
-    font-size: 1.4em;
+    justify-self: baseline;
+    font-size: 3vh;
     font-weight: bold;
+    margin: auto;
 }
 
 .erreur1 {
-    background-color: #red;
-    
-    WIDTH: 20%;
-    display: inline-flex;
-    POSITION: ABSOLUTE;
-    top: 33em;
-    left: 69em;
+    margin: 0 auto 0 auto;
+    width: 15em;
+    font-size: 25px;
+    /* text-align: center; */
+    font-weight: bold;
+    background-color: RED;
+    border-radius: 60px;
+    /* outline: none; */
+    display: flex;
+    justify-content: center;
+    /* justify-self: baseline; */
+    margin-top: 4px;
 }
 
-.p1 {
+.poste1 {
     
-    font-size: 1.4em;
+    justify-self: baseline;
+    font-size: 3vh;
     font-weight: bold;
+    margin: auto;
 }

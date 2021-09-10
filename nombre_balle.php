@@ -50,7 +50,8 @@ session_start();
                
             }
             elseif($_POST['point'] < 1){ ?>
-                <div class="erreur1">
+            
+            <div class="erreur1">
                 <p class="poste1">Veuillez entrer une valeur valide</p>
             </div>
 
