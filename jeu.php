@@ -298,6 +298,7 @@ $donnees2 = "";
                             }
                             
                         }
+                        
                         elseif(($point1 - $point2 == 4) || ($point2 - $point1 == 4)){
                             echo '';
                             $_SESSION['instruction3'] = "Une équipe semble en difficulté... Pour rééquilibrer le match, chaque joueur tourne de 1 vers la droite. Bon match !";
